@@ -1,7 +1,7 @@
-extends RefCounted
+﻿extends RefCounted
 
-const GENERATED_BY_NOTE := "M24.6.1 ModelWrapperBuilder"
-const GENERATED_VERSION := "M24.6.1"
+const GENERATED_BY_NOTE := "M24.6.3 ModelWrapperBuilder"
+const GENERATED_VERSION := "M24.6.3"
 const MANAGED_IMPORT_ROOT_RES := "res://assets/theme_imports"
 const SUPPORTED_MODEL_EXTENSIONS: Array[String] = ["gltf", "glb"]
 const SUPPORTED_SCENE_EXTENSIONS: Array[String] = ["tscn"]
@@ -669,28 +669,58 @@ func _count_occurrences(text: String, needle: String) -> int:
 	return count
 
 func _resolve_scene_path(level_baker_root_absolute: String, user_path: String) -> String:
-	var clean_path: String = user_path.replace("\\", "/").strip_edges()
-	if clean_path.begins_with("/") or clean_path.contains(":/") or clean_path.contains(":\\"):
-		return clean_path.simplify_path()
-	if clean_path.begins_with("res://"):
-		return _res_path_to_game_absolute_path(level_baker_root_absolute, clean_path)
-	return _normalize_level_baker_root_absolute(level_baker_root_absolute).path_join(clean_path).simplify_path()
-
+	
+var clean_path: String = user_path.replace("\\", "/").strip_edges()
+	
+if clean_path.begins_with("/") or clean_path.contains(":/") or clean_path.contains(":\\"):
+		
+return clean_path.simplify_path()
+	
+if clean_path.begins_with("res://"):
+		
+return _res_path_to_game_absolute_path(level_baker_root_absolute, clean_path)
+	
+return _normalize_level_baker_root_absolute(level_baker_root_absolute).path_join(clean_path).simplify_path()
 func _game_project_root_absolute(level_baker_root_absolute: String) -> String:
-	var clean_root: String = _normalize_level_baker_root_absolute(level_baker_root_absolute)
-	if clean_root.get_file() == "GameProject":
-		return clean_root
-	return clean_root.path_join("../GameProject").simplify_path()
-
+	
+var clean_root: String = _normalize_level_baker_root_absolute(level_baker_root_absolute)
+	
+if clean_root.get_file() == "GameProject":
+		
+return clean_root
+	
+if clean_root.get_file() == "LevelBakerProject":
+		
+return clean_root.path_join("../GameProject").simplify_path()
+	
+var sibling_game_project: String = clean_root.path_join("../GameProject").simplify_path()
+	
+if DirAccess.dir_exists_absolute(sibling_game_project):
+		
+return sibling_game_project
+	
+var child_game_project: String = clean_root.path_join("GameProject").simplify_path()
+	
+if DirAccess.dir_exists_absolute(child_game_project):
+		
+return child_game_project
+	
+return sibling_game_project
 func _normalize_level_baker_root_absolute(level_baker_root_absolute: String) -> String:
-	var clean_root: String = level_baker_root_absolute.replace("\\", "/").strip_edges()
-	if clean_root.is_empty() or clean_root == "res://" or clean_root.begins_with("res://"):
-		clean_root = ProjectSettings.globalize_path("res://").replace("\\", "/").strip_edges()
-	clean_root = clean_root.simplify_path()
-	while clean_root.ends_with("/"):
-		clean_root = clean_root.trim_suffix("/")
-	return clean_root
-
+	
+var clean_root: String = level_baker_root_absolute.replace("\\", "/").strip_edges()
+	
+if clean_root.is_empty() or clean_root == "res://" or clean_root.begins_with("res://"):
+		
+clean_root = ProjectSettings.globalize_path("res://").replace("\\", "/").strip_edges()
+	
+clean_root = clean_root.simplify_path()
+	
+while clean_root.ends_with("/"):
+		
+clean_root = clean_root.trim_suffix("/")
+	
+return clean_root
 func _to_scene_safe_name(raw_name: String) -> String:
 	var output: String = ""
 	for index in range(raw_name.length()):
@@ -711,20 +741,36 @@ func _to_scene_safe_name(raw_name: String) -> String:
 	return output
 
 func _absolute_game_path_to_res_path(level_baker_root_absolute: String, absolute_path: String) -> String:
-	var clean_absolute: String = absolute_path.replace("\\", "/").simplify_path()
-	var game_project_root: String = _game_project_root_absolute(level_baker_root_absolute)
-	if clean_absolute.begins_with(game_project_root):
-		var suffix: String = clean_absolute.trim_prefix(game_project_root).trim_prefix("/")
-		return "res://%s" % suffix
-	return clean_absolute
-
+	
+var clean_absolute: String = absolute_path.replace("\\", "/").simplify_path()
+	
+var game_project_root: String = _game_project_root_absolute(level_baker_root_absolute).replace("\\", "/").simplify_path()
+	
+if clean_absolute.begins_with(game_project_root):
+		
+var suffix: String = clean_absolute.trim_prefix(game_project_root).trim_prefix("/")
+		
+return "res://%s" % suffix
+	
+return clean_absolute
 func _res_path_to_game_absolute_path(level_baker_root_absolute: String, res_path: String) -> String:
-	var suffix: String = res_path.trim_prefix("res://").trim_prefix("/")
-	return _game_project_root_absolute(level_baker_root_absolute).path_join(suffix).simplify_path()
-
+	
+var clean_res_path: String = res_path.replace("\\", "/").strip_edges()
+	
+if not clean_res_path.begins_with("res://"):
+		
+return _resolve_scene_path(level_baker_root_absolute, clean_res_path)
+	
+var suffix: String = clean_res_path.trim_prefix("res://").trim_prefix("/")
+	
+return _game_project_root_absolute(level_baker_root_absolute).path_join(suffix).simplify_path()
 func _is_inside_game_project(level_baker_root_absolute: String, absolute_path: String) -> bool:
-	return absolute_path.replace("\\", "/").simplify_path().begins_with(_game_project_root_absolute(level_baker_root_absolute))
-
+	
+var clean_absolute: String = absolute_path.replace("\\", "/").simplify_path()
+	
+var game_project_root: String = _game_project_root_absolute(level_baker_root_absolute).replace("\\", "/").simplify_path()
+	
+return clean_absolute.begins_with(game_project_root)
 func _escape_scene_string(value: String) -> String:
 	return value.replace("\\", "\\\\").replace("\"", "\\\"")
 
