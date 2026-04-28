@@ -1,0 +1,17 @@
+M20 validation
+
+1. Open `GameProject/project.godot`
+2. Start a session and enter the holding room
+3. Confirm level pedestals appear from manifest-backed catalog data
+4. Aim at different pedestals:
+	- targeted pedestal should highlight
+	- level info panel should update
+	- preview image should show when available
+5. Select a pedestal as host:
+	- selected pedestal should update
+	- portal text should include selected level name
+6. If a pedestal is locked:
+	- interaction should be denied
+	- status message should explain why
+7. Completed levels should show COMPLETE on the pedestal when local progress marks them complete
+8. Enter the selected level and confirm the baked runtime path still works

@@ -1,0 +1,10 @@
+v58 milestone 17
+- Added runtime chunk metadata to LevelRuntimeData.
+- Added LevelChunkState and LevelChunkManager.
+- Runtime tiles are now assigned to 16x16 chunks.
+- Generated tile visuals now build under chunk roots.
+- Active level visuals are shown/hidden by nearby chunk window.
+- Tile targeting now searches active chunks first.
+- Nearby label updates are now chunk-aware.
+- Tile completion now dirties only the owning chunk and refreshes visible dirty chunks.
+- Existing save/load and multiplayer still remain pixel-id based.

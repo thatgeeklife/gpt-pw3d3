@@ -1,0 +1,8 @@
+M24.5.2 wrapper repair hotfix
+
+- Keeps M24.5 external GLTF/GLB import behavior.
+- Adds a stronger missing-wrapper repair path before validation.
+- If a generated wrapper was accidentally created under LevelBakerProject/assets/theme_imports, it is copied into GameProject/assets/theme_imports.
+- If a wrapper path is stored but the wrapper file is missing, validation now searches managed import folders for the matching sibling .glb/.gltf and regenerates the wrapper.
+- Scene assignment now attempts repair before refusing a wrapper path.
+- Runtime Steam lobby/networking files are unchanged.

@@ -1,0 +1,4 @@
+v58 M18 fix 6
+- Moved MultiMesh tile/orb color data to INSTANCE_CUSTOM shader path instead of relying on per-instance colors.
+- Nearby labels now sort by nearest distance instead of chunk iteration order.
+- Tile labels now stay attached flat to the tile top instead of billboard-facing the camera.

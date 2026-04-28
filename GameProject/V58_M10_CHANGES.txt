@@ -1,0 +1,5 @@
+v58 milestone 10
+- Reoriented the third-person camera so the player faces away from the camera again.
+- Rotated the facing cone horizontally 180 degrees so it points the same way the player is facing.
+- Adjusted tile targeting to prefer farther targets, especially when aiming diagonally.
+- Increased alignment weighting and added a side-angle penalty so diagonal near tiles are less likely to be selected.

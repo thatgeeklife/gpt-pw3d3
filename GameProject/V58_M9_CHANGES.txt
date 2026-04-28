@@ -1,0 +1,5 @@
+v58 milestone 9
+- Added CompletionOrbProjectile visual effect scene and script.
+- Tile completions now spawn a moving orb from the acting player toward the target tile before the permanent tile orb appears.
+- Added a dedicated highlight mesh/pulse for incomplete targetable tiles.
+- Added EffectsRoot to generated levels so completion effects have a clean runtime parent.

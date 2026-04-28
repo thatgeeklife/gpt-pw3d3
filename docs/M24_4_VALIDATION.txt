@@ -1,0 +1,37 @@
+M24.4 validation
+
+Baseline:
+- This package was built from the uploaded M24.2 zip.
+
+Expected authoring checks:
+1. Open `LevelBakerProject/project.godot`.
+2. Open the Theme Authoring tab.
+3. Confirm the header says `Theme Authoring Tool - M24.4`.
+4. Press Browse on any floor or wall scene field.
+5. Confirm the file dialog accepts:
+	- `*.tscn`
+	- `*.gltf`
+	- `*.glb`
+
+TSCN check:
+1. Select an existing `../GameProject/.../*.tscn` piece.
+2. Confirm the field stores a `res://.../*.tscn` path.
+3. Press Validate Theme.
+4. Confirm the validation pass treats the path as a normal scene path.
+
+GLTF/GLB wrapper check:
+1. Place a `.gltf` or `.glb` model under `GameProject`, preferably near the theme contract scenes.
+2. Select that model from a floor or wall Browse button.
+3. Confirm the tool generates a sibling file named:
+	- `<source_name>_wrapper.tscn`
+4. Confirm the field stores the generated wrapper path, not the original model path.
+5. Press Validate Theme.
+6. Confirm the generated wrapper validates as a `.tscn` scene.
+
+Manual bad-path check:
+1. Manually type a `.gltf` or `.glb` path into a scene field.
+2. Press Validate Theme.
+3. Confirm validation reports that authored scene fields must resolve to `.tscn` and instructs you to use Browse to generate a wrapper.
+
+Expected limitation:
+- I could not run the Godot editor inside this environment, so this package includes static/code-level validation only.

@@ -1,0 +1,7 @@
+v58 milestone 8
+- Added playable co-op tile completion flow.
+- Added simple local targeting/highlighting for incomplete tiles in generated levels.
+- Added interact_tile input action (F).
+- Added host-authoritative tile completion request/validation/broadcast in GameRoot.gd.
+- Added session seed RPC so host session state is pushed to clients.
+- Added local personal-progress writeback for eligible players when authoritative tile completions arrive.

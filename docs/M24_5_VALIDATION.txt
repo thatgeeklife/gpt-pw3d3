@@ -1,0 +1,10 @@
+M24.5 validation notes
+
+Static validation performed in this environment:
+- confirmed M24.5 files were patched on top of the existing M24.4 package
+- confirmed ThemeAuthoringMain.gd now passes the selected scene field to ModelWrapperBuilder.gd
+- confirmed ModelWrapperBuilder.gd contains external GLTF/GLB managed-import support
+- confirmed generated import folders and documentation are present
+- confirmed runtime/lobby/networking scripts were not intentionally modified for this patch
+
+Godot editor execution was not available in this environment, so the package has not been opened inside Godot.

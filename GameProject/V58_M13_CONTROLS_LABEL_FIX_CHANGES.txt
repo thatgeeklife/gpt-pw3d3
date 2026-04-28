@@ -1,0 +1,5 @@
+v58 M13 controls / cone / tile label fix
+- Reversed keyboard player rotation direction from the previous build.
+- Reoriented the facing cone so the wide end attaches to the player and the tip points forward.
+- Lowered tile color-code text so it sits attached near the tile surface instead of hovering high above it.
+- Increased tile color-code text size and outline for readability.

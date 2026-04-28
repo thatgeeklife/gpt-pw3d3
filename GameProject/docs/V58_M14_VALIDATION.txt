@@ -1,0 +1,35 @@
+v58 M14 validation
+
+Holding room level select:
+1. Host a session and stay in the holding room.
+2. Walk toward a level pedestal.
+3. Verify the currently targetable pedestal highlights.
+4. Press F.
+5. Verify the selected pedestal updates and the entry portal now uses that level.
+
+Pixel-art source images:
+1. Open res://assets/levels/.
+2. Verify the old random-color test images were replaced by:
+	- forest_icon_16.png
+	- lava_icon_32.png
+	- portrait_64.png
+	- scene_512.png
+3. Verify they have transparent edges outside the art.
+
+Player floor rings:
+1. Join with multiple players.
+2. Verify each player gets a bright glowing ring on the floor.
+3. Verify colors follow player order:
+	blue, red, green, yellow, orange, purple
+
+Tile and minimap colors:
+1. Enter a generated level.
+2. Verify incomplete in-world tiles are parchment colored.
+3. Verify completed tiles switch to their full source color.
+4. Verify minimap background is parchment colored.
+5. Verify incomplete minimap tiles are parchment colored.
+6. Verify completed minimap tiles show true color.
+
+Highlight color:
+1. With at least one player, target an incomplete tile.
+2. Verify the crosshair highlight matches that player's assigned ring color.

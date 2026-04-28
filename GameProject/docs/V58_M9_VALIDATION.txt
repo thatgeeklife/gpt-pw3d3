@@ -1,0 +1,18 @@
+v58 M9 validation
+
+Highlight validation:
+1. Host a session and enter a generated level.
+2. Approach incomplete tiles.
+3. Verify the current target tile shows a separate pulsing highlight plate/mesh.
+4. Verify completed tiles never highlight.
+
+Projectile validation:
+1. Highlight an incomplete tile.
+2. Press F.
+3. Verify a small orb projectile travels from the player toward the tile.
+4. Verify the permanent completed orb appears after the projectile reaches the tile.
+
+Multiplayer validation:
+1. Host and client enter the same generated level.
+2. Have host complete a tile and verify both peers see the projectile originate from the host side.
+3. Have client complete a different tile and verify both peers see the projectile originate from the client side.

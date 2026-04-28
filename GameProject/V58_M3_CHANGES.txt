@@ -1,0 +1,11 @@
+v58 milestone 3
+- Added LevelGenerator.gd
+- Added GeneratedTile.tscn and GeneratedTile.gd
+- M3 now supports:
+	- full rectangular room generation
+	- 5-tile border around occupied image pixels
+	- enclosing walls with collision
+	- generated tile placement from LevelDefinition data
+	- muted tile colors via LevelTheme.get_muted_color(...)
+	- basic completed/incomplete tile visual state foundation
+- Also patched LevelImageImporter.gd validation code to use the resource properties directly.

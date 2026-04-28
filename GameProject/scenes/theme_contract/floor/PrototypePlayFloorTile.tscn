@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[node name="PrototypePlayFloorTile" type="Node3D"]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.02, 0)
+mesh = SubResource("BoxMesh_play")
+
+[sub_resource type="BoxMesh" id="BoxMesh_play"]
+size = Vector3(1.88, 0.04, 1.88)

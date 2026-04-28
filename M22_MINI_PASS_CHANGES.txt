@@ -1,0 +1,8 @@
+M22 mini-pass
+- converted level selection from automatic pedestal placement to hand-placed pedestal binding
+- added `GameProject/scenes/level_select/HoldingRoomPedestalLayout.tscn`
+- updated `GameProject/scripts/level_select/LevelSelectPedestal.gd` with:
+	- `bound_level_id`
+	- `fallback_level_key`
+	- binding/missing-state helpers
+- updated `GameProject/scripts/GameRoot.gd` to instantiate and bind the placed pedestal layout instead of auto-generating pedestal positions

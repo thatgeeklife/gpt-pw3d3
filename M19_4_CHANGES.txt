@@ -1,0 +1,7 @@
+M19.4
+- added `LevelBakerProject/scripts/BakeManifest.gd`
+- baker now updates `SharedLevelContent/bake_manifest.json` on successful bake
+- added `docs/M19_4_OVERVIEW.md`
+- added `docs/M19_4_VALIDATION.txt`
+- added `docs/M19_BAKER_WORKFLOW.md`
+- included initial manifest entries for current baked levels

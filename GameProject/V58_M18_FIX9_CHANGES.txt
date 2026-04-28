@@ -1,0 +1,10 @@
+v58 M18 fix 9
+- Rebuilt LevelRenderResources.gd again with no top-level indentation.
+- Changed ChunkTileRenderer to use a constant parchment material for incomplete tiles and palette-bucket materials for completed tiles, removing dependence on MultiMesh per-instance colors.
+- Hid the simplified chunk-rendered orb meshes for now.
+- Increased tile label distance again and made label selection scan all tiles so labels keep updating smoothly near cluster edges.
+- Rewrote arrow key mappings explicitly:
+	LEFT = move left
+	UP = move forward
+	RIGHT = move right
+	DOWN = move back

@@ -1,0 +1,9 @@
+M24.6.1 hotfix
+
+- Validation Asset Health now uses the same stronger absolute file-exists check as ModelWrapperBuilder.
+- Asset Health now prints the resolved absolute scene path for each stored res:// path.
+- Asset Health now prints the resolved absolute wrapper source path when wrapper metadata is available.
+- Missing-scene errors now include the exact absolute path being checked.
+- Updated wrapper metadata version to M24.6.1 for newly generated wrappers.
+
+This package does not change Steam lobby, networking, portal, or runtime gameplay logic.

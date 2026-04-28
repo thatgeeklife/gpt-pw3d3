@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/level_select/LevelSelectPedestal.tscn" id="1"]
+
+[node name="HoldingRoomPedestalLayout" type="Node3D"]
+
+[node name="Pedestal_Forest" parent="." instance=ExtResource("1")]
+position = Vector3(-4.2, 0, -0.8)
+bound_level_id = "generated_forest_16"
+fallback_level_key = "Forest"
+
+[node name="Pedestal_Lava" parent="." instance=ExtResource("1")]
+position = Vector3(-1.4, 0, -0.8)
+bound_level_id = "generated_lava_32"
+fallback_level_key = "Lava"
+
+[node name="Pedestal_Portrait" parent="." instance=ExtResource("1")]
+position = Vector3(1.4, 0, -0.8)
+bound_level_id = "generated_portrait_64"
+fallback_level_key = "Portrait"
+
+[node name="Pedestal_Scene" parent="." instance=ExtResource("1")]
+position = Vector3(4.2, 0, -0.8)
+bound_level_id = "generated_scene_512"
+fallback_level_key = "Scene"

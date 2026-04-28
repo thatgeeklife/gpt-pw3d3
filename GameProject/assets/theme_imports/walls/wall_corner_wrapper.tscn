@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/theme_imports/walls/wall_corner.gltf" id="1_model"]
+
+[node name="wall_cornerWrapper" type="Node3D"]
+metadata/generated_by = "M24.6.1 ModelWrapperBuilder"
+metadata/generated_version = "M24.6.1"
+metadata/source_model_path = "res://assets/theme_imports/walls/wall_corner.gltf"
+metadata/original_external_source_path = "C:/Users/juntr/Downloads/godot_steam_portal_m24_6_1/GameProject/assets/theme_imports/walls/wall_corner.gltf"
+metadata/imported_model_res_path = "res://assets/theme_imports/walls/wall_corner.gltf"
+metadata/generated_wrapper_res_path = "res://assets/theme_imports/walls/wall_corner_wrapper.tscn"
+metadata/m24_5_original_source_path = "C:/Users/juntr/Downloads/godot_steam_portal_m24_6_1/GameProject/assets/theme_imports/walls/wall_corner.gltf"
+metadata/m24_5_imported_model_path = "C:/Users/juntr/Downloads/godot_steam_portal_m24_6_1/GameProject/assets/theme_imports/walls/wall_corner.gltf"
+metadata/m24_6_original_external_source_path = "C:/Users/juntr/Downloads/godot_steam_portal_m24_6_1/GameProject/assets/theme_imports/walls/wall_corner.gltf"
+metadata/m24_6_imported_model_res_path = "res://assets/theme_imports/walls/wall_corner.gltf"
+metadata/m24_6_generated_wrapper_res_path = "res://assets/theme_imports/walls/wall_corner_wrapper.tscn"
+metadata/m24_6_generated_version = "M24.6.1"
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

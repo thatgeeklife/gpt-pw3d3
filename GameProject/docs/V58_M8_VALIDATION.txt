@@ -1,0 +1,24 @@
+v58 M8 validation
+
+Single-player / host validation:
+1. Host a session and enter a generated level.
+2. Move toward incomplete tiles.
+3. Verify one incomplete tile in front of the player highlights.
+4. Press F.
+5. Verify the highlighted tile becomes completed and shows the orb state.
+6. Verify completed tiles no longer highlight.
+
+Multiplayer validation:
+1. Host and client join the same lobby/session.
+2. Host selects a generated level and both players enter.
+3. Verify both peers see the same already-completed seeded tiles.
+4. Have one player highlight an incomplete tile and press F.
+5. Verify that tile becomes completed on both peers.
+6. Have the other player complete a different tile.
+7. Verify both peers update the same tile visually.
+
+Save-path validation:
+1. Complete a few tiles.
+2. Leave session so progress saves.
+3. Reopen and host again.
+4. Verify completed tiles are seeded back in from local progress.

@@ -1,0 +1,27 @@
+M19.4 validation
+
+1. Open `LevelBakerProject/project.godot`
+2. Confirm the baker opens cleanly
+3. Confirm the source/output browse buttons still work
+4. Bake `sample_forest`
+5. Confirm all three files are present/updated:
+   - `SharedLevelContent/baked_levels/sample_forest_level.tres`
+   - `SharedLevelContent/baked_levels/sample_forest_level.json`
+   - `SharedLevelContent/bake_manifest.json`
+
+6. Open `SharedLevelContent/bake_manifest.json`
+7. Confirm `sample_forest` entry contains:
+   - level id
+   - source image path
+   - baked tres path
+   - baked json path
+   - visible pixel count
+   - palette count
+   - baker version
+   - bake timestamp
+
+8. Open `GameProject/project.godot`
+9. Select a baked level and confirm it still loads through the baked path
+
+Expected limitation:
+- the game runtime still uses the legacy compatibility adapter internally rather than consuming `BakedLevelDefinition` directly

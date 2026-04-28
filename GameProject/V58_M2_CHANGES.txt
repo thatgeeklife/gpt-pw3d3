@@ -1,0 +1,11 @@
+v58 milestone 2
+- Added LevelImageImporter.gd
+- Supports importing an image into a LevelDefinition where:
+	- each non-transparent pixel becomes a LevelPixelData entry
+	- pixel ids are deterministic: (y * source_width) + x
+	- original pixel colors are preserved
+- Added helpers for:
+	- validating imported definitions
+	- saving a definition as JSON
+	- loading a definition from JSON
+	- counting visible pixels in an image

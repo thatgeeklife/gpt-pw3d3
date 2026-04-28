@@ -1,0 +1,6 @@
+v54
+- Fixed Steam lobby browser to rebuild from Steam's internal lobby cache instead of assuming the lobby_match_list callback payload is already a hydrated list.
+- Requests lobby data for discovered lobbies before applying metadata-based filters.
+- Keeps newly found lobbies visible even if metadata is not hydrated yet, so the lobby you just created is no longer hidden.
+- Rebuilds the visible lobby list when lobby data updates arrive.
+- Refreshes the lobby list immediately after creating or joining a lobby.

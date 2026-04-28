@@ -1,0 +1,36 @@
+v58 M18 validation
+
+Chunk renderer:
+1. Load a generated level.
+2. Inspect GeneratedLevelRoot/TileRoot.
+3. Verify chunk roots contain ChunkTileRenderer nodes instead of large tile node lists.
+
+Tile visuals:
+1. Enter a level.
+2. Verify incomplete tiles are parchment colored.
+3. Complete some tiles.
+4. Verify completed tiles switch to source colors.
+
+Completed orb visuals:
+1. Complete some tiles.
+2. Verify static completed orb shells/cores appear on completed tiles.
+
+Nearby labels:
+1. Move around the level.
+2. Verify nearby incomplete codes are shown.
+3. Verify distant codes are hidden.
+4. Verify the targeted tile code remains eligible.
+
+Chunk-local refresh:
+1. Complete a tile.
+2. Verify the owning chunk updates.
+3. Verify the whole level does not need a broad tile-node refresh.
+
+Multiplayer regression:
+1. Host and join a second player.
+2. Enter the same level.
+3. Complete tiles.
+4. Verify clients still receive visual chunk updates correctly.
+
+Known M18 tradeoff:
+- Completed orb visuals are now simplified static chunk-rendered visuals rather than individually animated per-tile node effects.

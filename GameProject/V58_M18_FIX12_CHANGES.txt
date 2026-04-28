@@ -1,0 +1,7 @@
+v58 M18 fix 12
+- Restored bounded tile visibility instead of whole-map visibility.
+- Tile visibility now uses a larger-but-bounded chunk radius around the player.
+- Labels now only consider incomplete tiles inside currently visible chunks.
+- Labels now use a moderate forward cone based on player facing.
+- Target tile remains eligible even if slightly outside the label cone.
+- Kept the larger label distance, but only within the visible tile set.

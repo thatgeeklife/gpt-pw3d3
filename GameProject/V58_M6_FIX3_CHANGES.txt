@@ -1,0 +1,4 @@
+v58 M6 fix 3
+- Fixed LevelImageImporter so import_image_to_definition() now uses ResourceLoader-backed image loading instead of Image.load on res:// PNG paths.
+- Fixed get_visible_pixel_count_from_image() to use the same export-safe image loading path.
+- Patched Player.gd to disable SpringArm collision retraction, which is the most likely source of the forward+jump screen flicker.

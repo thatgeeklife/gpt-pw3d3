@@ -1,0 +1,20 @@
+M21.1 validation
+
+1. Open `GameProject/project.godot`
+2. Launch into the holding room and select a level
+3. Confirm:
+   - gameplay tiles look noticeably larger in world space
+   - walls/floor still surround the room correctly
+   - player movement still feels reasonable
+   - tile targeting still works
+   - highlight covers the larger tile footprint
+   - completion orb still travels and lands correctly
+   - return portal still appears in a sane location
+
+4. Verify minimap/gameplay logic:
+   - tile completion still matches the same logical cells
+   - save/progression behavior still works
+   - labels still line up with the tile tops
+
+Expected M21.1 limitation:
+- the room still uses simple floor/wall primitives rather than modular theme kit pieces

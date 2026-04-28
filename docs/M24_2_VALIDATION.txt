@@ -1,0 +1,29 @@
+M24.2 validation
+
+1. Open `LevelBakerProject/project.godot`
+2. Switch to the Theme Authoring tab
+3. Confirm there is now:
+	- a Validate Theme button
+	- a Validation Report panel
+
+4. Press New Theme
+5. Confirm validation report updates
+
+6. Set:
+	- blank theme id
+	- blank theme name
+	- zero wall weights
+7. Press Validate Theme
+8. Confirm the report shows errors
+
+9. Assign one or more scene paths
+10. Confirm the report shows:
+	- missing-file errors for bad paths
+	- warnings for missing optional assignments
+	- warnings when authored scene pack id is blank but scene paths are assigned
+
+11. Load an existing valid theme JSON and validate again.
+
+Expected limitation:
+- validation uses a first-pass scene file inspection rather than a full preview/runtime instantiation pass
+- preview room is not part of M24.2

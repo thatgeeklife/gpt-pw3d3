@@ -1,0 +1,18 @@
+M21.4
+- expanded `GameProject/data/levels/LevelTheme.gd` with authored-scene contract fields
+- added `GameProject/systems/level_runtime/ThemeAuthoringContract.gd`
+- added normalized prototype scene placeholders for:
+	- play floor
+	- edge floor
+	- outer floor
+	- three straight wall variants
+	- two corner post variants
+- added `GameProject/data/levels/themes/normalized_prototype_theme.json`
+- added:
+	- `docs/M21_4_OVERVIEW.md`
+	- `docs/M21_4_VALIDATION.txt`
+	- `docs/M21_THEME_AUTHORING_CONTRACT.md`
+
+Note:
+- this is the authoring-contract + normalized-placeholder pass
+- third-party theme assets are not included in this package

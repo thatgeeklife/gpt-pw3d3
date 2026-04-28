@@ -1,0 +1,12 @@
+v58 milestone 18
+- Added ChunkTileRenderer with chunk-owned MultiMesh rendering.
+- Chunk visuals now use MultiMesh for:
+	- incomplete tiles
+	- completed tiles
+	- completed orb shells
+	- completed orb cores
+- LevelGenerator now builds chunk renderer nodes instead of per-tile GeneratedTile nodes for the normal path.
+- Added NearbyTileCodeLabelPool so nearby labels no longer depend on tile scene nodes.
+- GameRoot nearby label updates now use the label pool and runtime data.
+- Runtime chunk dirty refresh still remains local by chunk.
+- GeneratedTile remains in the project as a legacy/debug renderer but is no longer the standard chunk visual path.

@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[node name="PrototypeStraightWall_C" type="Node3D"]
+
+[node name="Center" type="MeshInstance3D" parent="."]
+position = Vector3(0, 2.5, 0)
+mesh = SubResource("CenterBody")
+
+[node name="LeftButtress" type="MeshInstance3D" parent="."]
+position = Vector3(-0.62, 2.8, 0)
+mesh = SubResource("Buttress")
+
+[node name="RightButtress" type="MeshInstance3D" parent="."]
+position = Vector3(0.62, 2.8, 0)
+mesh = SubResource("Buttress")
+
+[sub_resource type="BoxMesh" id="CenterBody"]
+size = Vector3(1.48, 5, 0.42)
+
+[sub_resource type="BoxMesh" id="Buttress"]
+size = Vector3(0.28, 5.6, 0.7)

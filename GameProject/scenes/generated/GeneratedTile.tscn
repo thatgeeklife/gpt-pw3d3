@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/generated/GeneratedTile.gd" id="1"]
+
+[node name="GeneratedTile" type="Node3D"]
+script = ExtResource("1")
+
+[node name="TileBase" type="MeshInstance3D" parent="."]
+
+[node name="HighlightMesh" type="MeshInstance3D" parent="."]
+
+[node name="HighlightCrossMesh" type="MeshInstance3D" parent="."]
+
+[node name="ColorCodeLabel" type="Label3D" parent="."]
+
+[node name="CompletionOrbAnchor" type="Node3D" parent="."]
+
+[node name="CompletionOrbMesh" type="MeshInstance3D" parent="CompletionOrbAnchor"]
+visible = false
+
+[node name="CompletionOrbCoreMesh" type="MeshInstance3D" parent="CompletionOrbAnchor"]
+visible = false

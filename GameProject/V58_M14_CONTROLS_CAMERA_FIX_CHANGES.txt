@@ -1,0 +1,8 @@
+v58 M14 controls/camera/pedestal fix
+- Camera now stays behind the player instead of orbiting freely.
+- Camera was moved higher and tilted further downward.
+- A and D now move left/right again.
+- Player rotation is now controlled only by right-click drag.
+- Fixed holding-room pedestal targeting by checking for the correct holding_room zone.
+- Pedestal targeting was made more forgiving.
+- Added two more level pedestals for Portrait and Scene.

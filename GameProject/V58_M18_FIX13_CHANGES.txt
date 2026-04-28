@@ -1,0 +1,4 @@
+v58 M18 fix 13
+- Pulled the label cone back so tiles somewhat to the sides and slightly behind can still get labels.
+- Added a close-range label buffer so nearby tiles are not left blank just because they fall outside the forward cone.
+- Fixed completed tile bucket transforms so completed tiles sit at the same height as incomplete tiles instead of appearing raised.

@@ -1,0 +1,6 @@
+v58 M18 fix 8
+- Reverted MultiMesh tile/orb shaders to use instance COLOR and MultiMesh.use_colors for tile/orb coloration.
+- Doubled the nearby tile label radius.
+- Fixed controller enum warnings by casting joy axis/button integers to JoyAxis/JoyButton.
+- Corrected arrow key mappings to use Godot's documented key codes:
+  LEFT=4194319, UP=4194320, RIGHT=4194321, DOWN=4194322.

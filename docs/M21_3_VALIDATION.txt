@@ -1,0 +1,19 @@
+M21.3 validation
+
+1. Open `GameProject/project.godot`
+2. Enter a level
+3. Confirm:
+	- walls are made of repeated perimeter segments instead of one giant wall slab per side
+	- more than one straight wall variant appears over longer perimeter runs
+	- corner posts appear at the room corners
+	- reloading the same level keeps the same wall pattern
+	- small rooms stay readable
+	- larger rooms show more wall variation
+
+4. Check collision:
+	- player cannot walk through wall segments
+	- corner collision still works
+
+Expected M21.3 limitation:
+- wall variants are still primitive generated pieces
+- imported authored wall-kit scenes come later

@@ -1,0 +1,3 @@
+v58 M17 fix
+- Renamed GeneratedTile.set_label_visible() parameter to avoid shadowing Node3D.is_visible().
+- Fixed LevelGenerator recursive tile lookup to avoid calling get() with an unsupported default argument.

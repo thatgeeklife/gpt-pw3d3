@@ -1,0 +1,5 @@
+v56
+- Removed requestLobbyData() calls from the lobby-list rebuild path.
+- Added one-shot lobby metadata requests per lobby ID during explicit refresh / host-create / join flows.
+- This breaks the requestLobbyData -> lobby_data_update -> rebuild -> requestLobbyData loop that was causing severe system lag.
+- lobby_data_update now rebuilds visible rows without requesting metadata again.

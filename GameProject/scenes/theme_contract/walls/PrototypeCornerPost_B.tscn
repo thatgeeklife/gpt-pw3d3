@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[node name="PrototypeCornerPost_B" type="Node3D"]
+
+[node name="Body" type="MeshInstance3D" parent="."]
+position = Vector3(0, 3.05, 0)
+mesh = SubResource("CornerBody")
+
+[node name="Cap" type="MeshInstance3D" parent="."]
+position = Vector3(0, 6.15, 0)
+mesh = SubResource("CornerCap")
+
+[sub_resource type="BoxMesh" id="CornerBody"]
+size = Vector3(1.04, 6.1, 1.04)
+
+[sub_resource type="BoxMesh" id="CornerCap"]
+size = Vector3(1.28, 0.30, 1.28)

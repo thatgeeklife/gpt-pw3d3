@@ -1,0 +1,5 @@
+v47
+- Re-enabled MultiplayerSynchronizer for movement sync.
+- Added player-nodes-ready handshake before sync publishing.
+- Removed explicit transform relay from Player movement path.
+- Kept v46 persistent root, UI flow, and deterministic player creation.

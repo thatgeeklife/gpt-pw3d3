@@ -1,0 +1,8 @@
+M19.1
+- moved the current game project into `GameProject/`
+- added `LevelBakerProject/` as a separate Godot project
+- added `SharedLevelContent/` folder structure
+- added canonical `SharedLevelContent/scripts/BakedLevelDefinition.gd`
+- added baker UI shell in `LevelBakerProject/scenes/BakerMain.tscn`
+- added `LevelBakerProject/scripts/BakerMain.gd`
+- added M19.1 overview and validation docs

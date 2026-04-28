@@ -1,0 +1,2 @@
+v58 M9 facing cone fix
+- Replaced unsupported ConeMesh with CylinderMesh using top_radius=0 to keep the same cone shape.

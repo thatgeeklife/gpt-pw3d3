@@ -1,0 +1,4 @@
+v58 pastel/chalky tile update
+- Updated LevelTheme.get_muted_color() so tile colors are more pastel and chalky.
+- Tile colors now have much lower saturation, a softer lifted value, and a blend toward a light chalk tone.
+- Tile materials were also given max roughness so the surface reads more matte/chalky.

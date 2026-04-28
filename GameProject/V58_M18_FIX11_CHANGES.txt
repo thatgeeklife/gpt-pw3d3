@@ -1,0 +1,6 @@
+v58 M18 fix 11
+- Increased nearby tile label coverage substantially:
+  - MAX_LABELS raised from 64 to 256
+  - label radius raised again
+- Restored completed orb visuals using palette-bucket multimeshes with cached colored orb materials.
+- Kept incomplete tile rendering on the stable constant parchment material path.

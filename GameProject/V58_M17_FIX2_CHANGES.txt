@@ -1,0 +1,4 @@
+v58 M17 fix 2
+- Robustly removed the unsupported two-argument get() call in LevelGenerator.gd.
+- Also made the recursive grid lookup avoid assuming a default get() overload.
+- Re-applied the GeneratedTile label parameter rename.

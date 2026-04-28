@@ -1,0 +1,5 @@
+M19.3 patch 2
+- fixed LevelBakerProject path handling for output browse/save
+- absolute paths now resolve correctly instead of being joined onto the project root
+- browse-selected paths inside sibling SharedLevelContent are converted back to ../SharedLevelContent/... automatically
+- output path no longer needs manual editing after using Browse Output

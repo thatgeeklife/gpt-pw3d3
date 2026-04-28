@@ -1,0 +1,7 @@
+M20 patch 1
+- fixed baked level adapter to support both:
+  - JSON-text baked files
+  - real Godot .tres resource files
+- prevents JSON parse errors when a .tres begins with [gd_resource]
+- .tres files are still preferred as the runtime source of truth
+- if a .tres cannot be loaded as a resource, adapter falls back cleanly without JSON parse spam

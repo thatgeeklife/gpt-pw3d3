@@ -1,0 +1,3 @@
+v58 M16 warning fix
+- Renamed GeneratedTile.set_label_visible() parameter to avoid shadowing Node3D.is_visible().
+- Made LevelImageImporter base36 step use explicit int division to remove integer division warning.

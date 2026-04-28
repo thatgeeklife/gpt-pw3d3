@@ -1,0 +1,7 @@
+v46
+- Restored Host / Join / Leave UI
+- World hidden until session active
+- Immediate host spawn on lobby creation
+- Client spawn after join registration
+- Fixed slot_row integer division warning
+- Tabs-only indentation

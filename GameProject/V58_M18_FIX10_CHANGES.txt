@@ -1,0 +1,5 @@
+v58 M18 fix 10
+- Added direct keyboard fallback in Player.gd so movement works with:
+  W + A + S + D and Up + Left + Down + Right arrows.
+- Forced all chunk roots visible while M18 chunk visibility is unstable, so incomplete tiles and labels should remain visible everywhere.
+- Rewrote project.godot input mappings explicitly for WASD + arrow keys.

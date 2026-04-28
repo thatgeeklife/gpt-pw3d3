@@ -1,0 +1,7 @@
+M21.1
+- expanded the world-space gameplay cell footprint to roughly 2x the previous width/depth
+- updated LevelGenerator floor and wall sizing to use the larger cell scale
+- updated runtime grid/world conversion and stored runtime cell size
+- enlarged tile footprint, highlight, and completion orb visuals
+- tuned player movement, zoom, tile interaction distance, label radius, and return-portal placement for the larger world scale
+- added initial `cell_world_size` field to LevelTheme for future modular theme work

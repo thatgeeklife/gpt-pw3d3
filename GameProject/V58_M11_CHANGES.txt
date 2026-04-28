@@ -1,0 +1,11 @@
+v58 milestone 11
+- Added full save/writeback loop for generated-level progress.
+- Local progress now tracks a dirty state.
+- Added save_if_dirty() and merge_session_progress() to LevelSaveSystem.
+- Added autosave timer in GameRoot (15 seconds).
+- Session progress now flushes back into local save data:
+	- during autosave
+	- when session closes
+	- on quit/window close
+	- immediately on local level completion
+- Leaving a session now flushes active session progress before disconnecting.

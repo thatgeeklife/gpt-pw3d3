@@ -1,0 +1,9 @@
+v58 milestone 1
+- Added level data resource scripts:
+	- LevelPixelData.gd
+	- LevelDefinition.gd
+	- LevelTheme.gd
+	- LevelCatalog.gd
+- Added personal progress resource script:
+	- PlayerProgressData.gd
+- These classes are editor/runtime-instantiable foundations for later image import, generation, unlock, and save work.

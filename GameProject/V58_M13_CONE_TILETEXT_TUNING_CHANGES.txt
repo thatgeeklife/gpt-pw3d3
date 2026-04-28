@@ -1,0 +1,6 @@
+v58 M13 cone / tile text / movement tuning
+- Moved the facing cone closer to the top of the player.
+- Changed tile code text so it lies nearly flat on the tile surface instead of reading like floating text.
+- Disabled billboard behavior for tile codes.
+- Increased player turn speed slightly.
+- Reduced player move speed slightly.

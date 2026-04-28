@@ -1,0 +1,6 @@
+v58 M18 fix 3
+- Rebuilt LevelRenderResources.gd with clean top-level formatting so the script resolves properly.
+- Fixed ChunkTileRenderer MultiMesh refresh logic so transform format is only assigned on first creation.
+- Switched MultiMesh tile/orb materials to shader materials so instance colors should render correctly.
+- Patched GameRoot to use the runtime-driven nearby label pool path.
+- Increased label readability with billboard labels and a slightly higher offset.

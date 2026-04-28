@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[node name="PrototypeEdgeFloorTile" type="Node3D"]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.015, 0)
+mesh = SubResource("BoxMesh_edge")
+
+[node name="Trim" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.04, 0)
+mesh = SubResource("BoxMesh_trim")
+
+[sub_resource type="BoxMesh" id="BoxMesh_edge"]
+size = Vector3(1.90, 0.03, 1.90)
+
+[sub_resource type="BoxMesh" id="BoxMesh_trim"]
+size = Vector3(1.98, 0.02, 0.18)

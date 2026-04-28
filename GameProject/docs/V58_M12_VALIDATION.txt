@@ -1,0 +1,14 @@
+v58 M12 validation
+
+Controls validation:
+1. Run the project and enter a session.
+2. Press A and confirm the player rotates left.
+3. Press D and confirm the player rotates right.
+4. Press W and confirm the player moves forward.
+5. Press S and confirm the player moves backward.
+6. Press A or D while moving and confirm movement is rotation-based, not strafe-based.
+
+Regression validation:
+1. Verify right-click camera orbit still works.
+2. Verify tile targeting/completion still works.
+3. Verify save/load behavior still works.

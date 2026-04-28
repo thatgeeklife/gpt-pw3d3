@@ -1,0 +1,3 @@
+v58 M6 fix 2
+- Fixed LevelImageImporter to load images through ResourceLoader so imported texture resources work in export builds.
+- Fixed GeneratedTile setup so node references are resolved before setup_from_pixel runs, even when the tile is configured before entering the scene tree.

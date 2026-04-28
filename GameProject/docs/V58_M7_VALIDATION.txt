@@ -1,0 +1,30 @@
+v58 M7 validation
+
+Primary validation:
+1. Run the project and host a session.
+2. Select Forest or Lava and enter the portal.
+3. Confirm the status line briefly reports a local progress file path was loaded.
+4. Leave the session once and confirm a save file is created under user://:
+	- player_progress_<steamid>.json when Steam is active
+	- player_progress_default.json otherwise
+
+Host-session seed validation:
+1. Close the game.
+2. Open the saved JSON file.
+3. Add some completed pixels manually under one generated level, for example:
+	"levels_progress": {
+		"generated_forest_16": {
+			"completed_pixel_ids": {
+				3: true,
+				7: true
+			},
+			"is_level_complete": false
+		}
+	}
+4. Run again and host a session.
+5. Select Forest and enter the portal.
+6. Verify those tile ids appear already completed in the generated level.
+
+Notes:
+- This milestone only proves local save/load plumbing and session seeding.
+- Multiplayer replication of session completion changes comes later.

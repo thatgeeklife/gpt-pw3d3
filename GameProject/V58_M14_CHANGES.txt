@@ -1,0 +1,19 @@
+v58 milestone 14
+- Added host-interactable level-select pedestals in the holding room.
+- Current targetable pedestal now highlights and selected level pedestal stays visually marked.
+- Replaced previous random test images with simple transparent-edge pixel-art test images:
+	- forest_icon_16
+	- lava_icon_32
+	- portrait_64
+	- scene_512
+- Added bright glowing player floor rings colored by player order:
+	1 blue
+	2 red
+	3 green
+	4 yellow
+	5 orange
+	6 purple
+- Tile highlight now matches the local player's assigned accent color.
+- All incomplete tiles now use an aged parchment color.
+- Completed tiles now switch to their full source pixel color.
+- Minimap now uses a parchment background and parchment incomplete tiles.

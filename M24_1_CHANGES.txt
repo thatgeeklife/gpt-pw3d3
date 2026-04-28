@@ -1,0 +1,14 @@
+M24.1
+- added tabbed tool root scene for:
+	- Level Baker
+	- Theme Authoring
+- added `LevelBakerProject/scenes/ToolRoot.tscn`
+- added `LevelBakerProject/scenes/ThemeAuthoringMain.tscn`
+- added `LevelBakerProject/scripts/theme_tool/ThemeDefinitionModel.gd`
+- added `LevelBakerProject/scripts/theme_tool/ThemeDefinitionIO.gd`
+- added `LevelBakerProject/scripts/theme_tool/ThemeAuthoringMain.gd`
+- updated `LevelBakerProject/project.godot` to open the new tool root scene
+- added:
+	- `docs/M24_1_OVERVIEW.md`
+	- `docs/M24_1_VALIDATION.txt`
+	- `M24_1_CHANGES.txt`

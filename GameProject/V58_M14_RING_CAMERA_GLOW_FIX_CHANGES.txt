@@ -1,0 +1,6 @@
+v58 M14 ring/camera/glow fix
+- Camera yaw was corrected again so it stays behind the player.
+- Ring size was reduced to about half-width.
+- Kept the projected decal ring and added a stronger glowing mesh ring overlay.
+- Ring glow was increased.
+- Tile highlight glow was increased so it better matches the ring.

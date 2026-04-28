@@ -1,0 +1,17 @@
+v58 milestone 13
+- Added per-color alphanumeric coding for generated level tiles.
+- Every unique tile color now gets a stable code at import/generation time.
+- Incomplete tiles show their color code above the tile.
+- Added color selection with Q / E.
+- Added top-left HUD showing:
+	- selected color swatch
+	- selected color code
+	- selected color index / total
+- Thrown orb now always uses the selected color captured at throw time.
+- Tile completion now only succeeds if the thrown color matches the tile's color.
+- Added lower-left minimap with:
+	- actual color for completed tiles
+	- near-black for incomplete tiles
+	- player marker
+	- facing arrow
+- Added top-right level progress HUD with floored whole-percent completion.

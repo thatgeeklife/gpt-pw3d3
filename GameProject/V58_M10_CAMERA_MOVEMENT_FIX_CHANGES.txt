@@ -1,0 +1,6 @@
+v58 M10 camera/movement fix
+- Camera orbit is now independent from player rotation.
+- Right-click mouse look rotates the SpringArm around the player instead of rotating the player body.
+- Restored third-person setup so the camera starts behind the player again.
+- Flipped the facing cone back so it points with the player's forward direction.
+- Fixed forward/backward and left/right movement being reversed.

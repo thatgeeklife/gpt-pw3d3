@@ -1,0 +1,28 @@
+v58 M16 validation
+
+Runtime data:
+1. Select a level.
+2. Verify it loads without obvious regressions.
+3. Confirm targeting still works on incomplete tiles only.
+
+Single highlight:
+1. Enter a level.
+2. Verify only one active target highlight is shown.
+3. Verify it follows the current targeted tile.
+
+Completion:
+1. Throw the wrong color.
+2. Verify the tile does not complete.
+3. Throw the correct color.
+4. Verify the tile completes and stays completed.
+
+Labels:
+1. Move through a level.
+2. Verify only nearby incomplete tiles show labels.
+3. Verify labels disappear after completion.
+
+Multiplayer:
+1. Host and client enter the same level.
+2. Complete tiles as host.
+3. Verify client sees the completed state update.
+4. Re-enter the level and confirm saved completion persists.

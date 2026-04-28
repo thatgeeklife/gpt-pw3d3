@@ -1,0 +1,10 @@
+v58 M18 controller patch
+- Added controller left-stick movement for the local player.
+- Added controller right-stick rotation:
+	- right stick X rotates the player
+	- right stick Y tilts the camera
+- Added controller bottom action button (button 0 / south button) for interact.
+- Added controller trigger color cycling:
+	- L2 switches to previous color
+	- R2 switches to next color
+- Added arrow-key movement support alongside WASD.

@@ -1,0 +1,4 @@
+v51
+- Patched SteamMultiplayerPeer host creation to use the 1-argument signature: create_host(0).
+- Patched SteamMultiplayerPeer client creation to use the 1-argument signature: create_client(host_steam_id).
+- Preserved the v50 Steam lobby browser UI and the working v47 gameplay/sync path.

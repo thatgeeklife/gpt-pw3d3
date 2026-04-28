@@ -1,0 +1,5 @@
+v55
+- Removed all getLobbiesList() usage because that function is not available in the target GodotSteam build.
+- Steam lobby browser now uses the lobby_match_list callback payload directly when available.
+- If the callback provides only a result count, lobby IDs are pulled with getLobbyByIndex via Steam.call().
+- Lobby rows are rebuilt from explicit lobby IDs and metadata is fetched with requestLobbyData/getLobbyData via Steam.call().

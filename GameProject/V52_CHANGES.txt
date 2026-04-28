@@ -1,0 +1,6 @@
+v52
+- Fixed Steam lobby join lifecycle so joining a lobby no longer activates the world/session UI immediately.
+- Client now keeps the menu visible while only in the Steam lobby.
+- Session/world activation now happens on connected_to_server, not on lobby_joined.
+- Current lobby selected-level metadata is applied only after the multiplayer connection is established.
+- Cleans up lobby state if connection fails while waiting after a lobby join.

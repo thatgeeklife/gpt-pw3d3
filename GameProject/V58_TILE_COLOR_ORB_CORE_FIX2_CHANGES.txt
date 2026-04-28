@@ -1,0 +1,2 @@
+v58 tile color + orb core update fix 2
+- Removed stray closing brace at the end of LevelTheme.gd.

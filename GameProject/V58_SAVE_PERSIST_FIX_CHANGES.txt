@@ -1,0 +1,5 @@
+v58 save persistence fix
+- Fixed completed tile persistence across runs.
+- Root cause: completed_pixel_ids saved through JSON came back with string keys, but runtime lookups expected int keys.
+- PlayerProgressData now normalizes completed_pixel_ids keys back to ints after load.
+- LevelSessionState now also normalizes completed pixel dictionaries when seeding or receiving replicated state.

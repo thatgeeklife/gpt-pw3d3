@@ -1,0 +1,26 @@
+M22 mini-pass validation
+
+1. Open:
+	- `GameProject/scenes/level_select/HoldingRoomPedestalLayout.tscn`
+
+2. Confirm it contains hand-placed pedestal instances.
+
+3. Select each pedestal instance and verify these exported fields exist:
+	- `bound_level_id`
+	- `fallback_level_key`
+
+4. Launch `GameProject/project.godot`
+
+5. Confirm:
+	- pedestals appear where they were placed in the layout scene
+	- no automatic grid placement is used
+	- each pedestal loads preview/name/lock state from the catalog
+	- interaction still works
+	- selected level still updates correctly
+
+6. Test a bad binding:
+	- temporarily set one pedestal to a fake `bound_level_id`
+	- confirm it shows as missing and does not load a level
+
+Expected limitation:
+- the current holding room is still procedurally created in GameRoot, but pedestal placement inside that room is now authored through the dedicated layout scene

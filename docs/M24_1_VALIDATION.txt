@@ -1,0 +1,27 @@
+M24.1 validation
+
+1. Open `LevelBakerProject/project.godot`
+2. Confirm the tool opens to a tabbed UI with:
+	- Level Baker
+	- Theme Authoring
+
+3. Open Theme Authoring and confirm:
+	- New Theme resets fields
+	- Load Theme opens a JSON file dialog
+	- Save Theme / Save Theme As write JSON
+	- Export to GameProject writes JSON to:
+		- `../GameProject/data/levels/themes/`
+
+4. Edit:
+	- theme id
+	- theme name
+	- colors
+	- wall weights
+	- scene paths
+
+5. Save and reload the same file.
+6. Confirm values round-trip correctly.
+
+Expected limitation:
+- there is no preview or validation panel yet
+- this is the editor + load/save/export pass only

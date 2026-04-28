@@ -1,0 +1,5 @@
+v57
+- Steam Host now creates PUBLIC lobbies so they can appear in the browser.
+- Lobby name remains '<persona name>'s Lobby' for easier identification.
+- Lobby browser now filters visible rows to lobbies that currently contain Steam friends, while still keeping the local user's own active lobby visible.
+- Friend-lobby filtering uses getFriendCount/getFriendByIndex/getFriendGamePlayed via Steam.call() to avoid compile-time API mismatches.

@@ -1,0 +1,137 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/GameRoot.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/MainMenuRoot.gd" id="2"]
+
+[node name="GameRoot" type="Node3D"]
+script = ExtResource("1")
+
+[node name="WorldRoot" type="Node3D" parent="."]
+
+[node name="HoldingRoomRoot" type="Node3D" parent="WorldRoot"]
+
+[node name="ActiveLevelRoot" type="Node3D" parent="WorldRoot"]
+
+[node name="Players" type="Node3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenuRoot" type="Control" parent="CanvasLayer"]
+script = ExtResource("2")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RootMargin" type="MarginContainer" parent="CanvasLayer/MainMenuRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RootHBox" type="HBoxContainer" parent="CanvasLayer/MainMenuRoot/RootMargin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="MenuPanel" type="PanelContainer" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuVBox" type="VBoxContainer" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox"]
+layout_mode = 2
+text = "Portal Co-op v50"
+
+[node name="SteamHostButton" type="Button" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox"]
+layout_mode = 2
+text = "Steam Host"
+
+[node name="DemoHostButton" type="Button" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox"]
+layout_mode = 2
+text = "Demo Host"
+
+[node name="DemoJoinButton" type="Button" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox"]
+layout_mode = 2
+text = "Demo Join"
+
+[node name="LeaveButton" type="Button" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox"]
+layout_mode = 2
+text = "Leave Session"
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox"]
+layout_mode = 2
+text = "Ready."
+autowrap_mode = 3
+
+[node name="LobbyPanel" type="PanelContainer" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox"]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LobbyVBox" type="VBoxContainer" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/LobbyPanel"]
+layout_mode = 2
+
+[node name="LobbyTitle" type="Label" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/LobbyPanel/LobbyVBox"]
+layout_mode = 2
+text = "Steam Lobbies"
+
+[node name="RefreshButton" type="Button" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/LobbyPanel/LobbyVBox"]
+layout_mode = 2
+text = "Refresh Lobby List"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/LobbyPanel/LobbyVBox"]
+custom_minimum_size = Vector2(0, 320)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LobbyListVBox" type="VBoxContainer" parent="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/LobbyPanel/LobbyVBox/ScrollContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SessionRoot" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/SessionRoot"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 360.0
+offset_bottom = 180.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/SessionRoot/PanelContainer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SessionRoot/PanelContainer/MarginContainer"]
+
+[node name="ForestButton" type="Button" parent="CanvasLayer/SessionRoot/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Select Forest"
+
+[node name="LavaButton" type="Button" parent="CanvasLayer/SessionRoot/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Select Lava"
+
+[node name="LeaveButton" type="Button" parent="CanvasLayer/SessionRoot/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Leave Session"
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer/SessionRoot/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "In session."
+autowrap_mode = 3
+
+[connection signal="pressed" from="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox/SteamHostButton" to="CanvasLayer/MainMenuRoot" method="_on_steam_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox/DemoHostButton" to="CanvasLayer/MainMenuRoot" method="_on_demo_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox/DemoJoinButton" to="CanvasLayer/MainMenuRoot" method="_on_demo_join_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/LobbyPanel/LobbyVBox/RefreshButton" to="CanvasLayer/MainMenuRoot" method="_on_refresh_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenuRoot/RootMargin/RootHBox/MenuPanel/MenuVBox/LeaveButton" to="CanvasLayer/MainMenuRoot" method="_on_leave_pressed"]
+
+[connection signal="pressed" from="CanvasLayer/SessionRoot/PanelContainer/MarginContainer/VBoxContainer/ForestButton" to="." method="_on_forest_pressed"]
+[connection signal="pressed" from="CanvasLayer/SessionRoot/PanelContainer/MarginContainer/VBoxContainer/LavaButton" to="." method="_on_lava_pressed"]
+[connection signal="pressed" from="CanvasLayer/SessionRoot/PanelContainer/MarginContainer/VBoxContainer/LeaveButton" to="." method="_on_leave_pressed"]

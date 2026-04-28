@@ -1,0 +1,8 @@
+M21.3
+- added `GameProject/systems/level_runtime/ThemePieceVariant.gd`
+- added `GameProject/systems/level_runtime/ThemeVariantResolver.gd`
+- added `GameProject/systems/level_runtime/RoomWallLayoutBuilder.gd`
+- upgraded wall generation to use perimeter slots and deterministic weighted variant selection
+- added basic repetition avoidance within each wall run
+- added corner post variants
+- expanded `LevelTheme.gd` with wall variant weighting controls

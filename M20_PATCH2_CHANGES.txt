@@ -1,0 +1,8 @@
+M20 patch 2
+- fixed baked adapter so it inspects file content first:
+  - JSON-text baked files are parsed as JSON
+  - real Godot text resources are only sent through ResourceLoader when the file starts with [gd_resource]
+- removes the .tres parse spam from JSON-text baked files
+- added manifest/definition caching in LevelCatalogService
+- baked definitions now reload only when the underlying file modification time changes
+- should remove the holding-room lag caused by repeatedly reparsing baked files

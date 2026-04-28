@@ -1,0 +1,15 @@
+v58 M5 validation
+
+Suggested validation steps:
+1. Generate a level using M3/M4 flow and pass some completed pixel ids.
+2. Check that incomplete tiles:
+	- still use the muted image-derived color
+	- do not show the permanent orb
+3. Check that completed tiles:
+	- show a glass-like orb centered above the tile
+	- use the original image color for the orb
+	- slightly darken the tile base beneath the orb
+4. Let the scene run for a few seconds and verify the completed orb:
+	- floats subtly up and down
+	- has a gentle emissive pulse
+5. Toggle a tile between incomplete/completed through script and verify the orb appears/disappears cleanly.

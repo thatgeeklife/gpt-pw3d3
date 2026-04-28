@@ -1,0 +1,6 @@
+v58 M6 more muted tile colors
+- Increased tile muting strength globally.
+- Updated the muted-color calculation to reduce saturation more aggressively,
+  lower value more noticeably, and blend more toward the floor color.
+- Forest theme muting increased to 0.82.
+- Lava theme muting increased to 0.86.

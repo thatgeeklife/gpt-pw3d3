@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[node name="PrototypeStraightWall_B" type="Node3D"]
+
+[node name="Body" type="MeshInstance3D" parent="."]
+position = Vector3(0, 2.35, 0)
+mesh = SubResource("WallBody")
+
+[node name="Cap" type="MeshInstance3D" parent="."]
+position = Vector3(0, 4.95, 0)
+mesh = SubResource("WallCap")
+
+[sub_resource type="BoxMesh" id="WallBody"]
+size = Vector3(1.72, 4.7, 0.44)
+
+[sub_resource type="BoxMesh" id="WallCap"]
+size = Vector3(1.94, 0.28, 0.52)

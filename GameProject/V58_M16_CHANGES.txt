@@ -1,0 +1,10 @@
+v58 milestone 16
+- Added LevelRuntimeData as the active data-driven tile runtime model.
+- Added LevelRuntimeBuilder to build runtime arrays from LevelDefinition and session completion state.
+- GameRoot now targets tiles by runtime tile index instead of tile scene nodes.
+- Tile completion now validates against runtime palette data instead of tile-node authority.
+- Added a single TileTargetHighlight scene driven by runtime target position and player color.
+- Nearby tile code visibility is now computed from runtime data and applied to tile views.
+- GeneratedTile now supports runtime tile indices and apply_runtime_state() view updates.
+- LevelGenerator now keeps a pixel-id to tile-node lookup map for visual refreshes.
+- Client session-seed sync now refreshes runtime data and visual tile state.

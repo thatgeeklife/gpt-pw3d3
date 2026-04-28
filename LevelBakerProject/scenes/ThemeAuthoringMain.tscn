@@ -1,0 +1,140 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/theme_tool/ThemeAuthoringMain.gd" id="1"]
+
+[node name="ThemeAuthoringMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderLabel" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Theme Authoring Tool - M24.6"
+
+[node name="SubtitleLabel" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+text = "Create, load, save, export, validate, wrap, rebuild, and inspect .gltf/.glb theme pieces."
+
+[node name="ButtonRow" type="HBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NewThemeButton" type="Button" parent="MarginContainer/VBox/ButtonRow"]
+layout_mode = 2
+text = "New Theme"
+
+[node name="LoadThemeButton" type="Button" parent="MarginContainer/VBox/ButtonRow"]
+layout_mode = 2
+text = "Load Theme"
+
+[node name="SaveThemeButton" type="Button" parent="MarginContainer/VBox/ButtonRow"]
+layout_mode = 2
+text = "Save Theme"
+
+[node name="SaveThemeAsButton" type="Button" parent="MarginContainer/VBox/ButtonRow"]
+layout_mode = 2
+text = "Save Theme As"
+
+[node name="ExportThemeButton" type="Button" parent="MarginContainer/VBox/ButtonRow"]
+layout_mode = 2
+text = "Export to GameProject"
+
+[node name="ValidateThemeButton" type="Button" parent="MarginContainer/VBox/ButtonRow"]
+layout_mode = 2
+text = "Validate Theme"
+
+[node name="CurrentPathLabel" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+text = "Current file: <unsaved>"
+
+[node name="BodySplit" type="HSplitContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 820
+
+[node name="LeftPanel" type="VBoxContainer" parent="MarginContainer/VBox/BodySplit"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBox/BodySplit/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FormVBox" type="VBoxContainer" parent="MarginContainer/VBox/BodySplit/LeftPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="RightPanel" type="VBoxContainer" parent="MarginContainer/VBox/BodySplit"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ValidationTitle" type="Label" parent="MarginContainer/VBox/BodySplit/RightPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Validation Report"
+
+[node name="ValidationReport" type="TextEdit" parent="MarginContainer/VBox/BodySplit/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+editable = false
+
+[node name="StatusTitle" type="Label" parent="MarginContainer/VBox/BodySplit/RightPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Status"
+
+[node name="StatusLog" type="TextEdit" parent="MarginContainer/VBox/BodySplit/RightPanel"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 180)
+size_flags_vertical = 1
+editable = false
+
+[node name="ThemeLoadDialog" type="FileDialog" parent="."]
+title = "Load Theme JSON"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.json ; Theme JSON")
+
+[node name="ThemeSaveDialog" type="FileDialog" parent="."]
+title = "Save Theme JSON"
+file_mode = 4
+access = 2
+filters = PackedStringArray("*.json ; Theme JSON")
+
+[node name="ScenePickDialog" type="FileDialog" parent="."]
+title = "Select Theme Scene or Model"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.tscn ; Godot Scene", "*.gltf ; GLTF Model", "*.glb ; GLB Model")
+
+[connection signal="pressed" from="MarginContainer/VBox/ButtonRow/NewThemeButton" to="." method="_on_new_theme_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/ButtonRow/LoadThemeButton" to="." method="_on_load_theme_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/ButtonRow/SaveThemeButton" to="." method="_on_save_theme_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/ButtonRow/SaveThemeAsButton" to="." method="_on_save_theme_as_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/ButtonRow/ExportThemeButton" to="." method="_on_export_theme_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/ButtonRow/ValidateThemeButton" to="." method="_on_validate_theme_pressed"]
+[connection signal="file_selected" from="ThemeLoadDialog" to="." method="_on_theme_load_file_selected"]
+[connection signal="file_selected" from="ThemeSaveDialog" to="." method="_on_theme_save_file_selected"]
+[connection signal="file_selected" from="ScenePickDialog" to="." method="_on_scene_pick_file_selected"]

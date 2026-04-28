@@ -1,0 +1,20 @@
+M24.4
+- started from the uploaded stable M24.2 baseline
+- added `LevelBakerProject/scripts/theme_tool/ModelWrapperBuilder.gd`
+- updated `LevelBakerProject/scenes/ThemeAuthoringMain.tscn` with:
+	- M24.4 title/subtitle
+	- Scene/model picker filters for `*.tscn`, `*.gltf`, and `*.glb`
+- updated `LevelBakerProject/scripts/theme_tool/ThemeAuthoringMain.gd` to:
+	- route selected theme-piece files through the wrapper builder
+	- use selected `.tscn` files directly
+	- create/reuse sibling `_wrapper.tscn` scenes when `.gltf` or `.glb` files are selected
+	- store the generated wrapper `.tscn` path in the theme JSON instead of the source model path
+- updated `LevelBakerProject/scripts/theme_tool/ThemeDefinitionIO.gd` so existing `res://` authored scene paths resolve back to `../GameProject` when browsing again from the authoring tool
+- updated `LevelBakerProject/scripts/theme_tool/ThemeValidationService.gd` to:
+	- require authored scene fields to resolve to `.tscn`
+	- guide manually typed `.gltf` / `.glb` paths back through Browse so wrappers are generated
+	- accept wrapper scenes that instance an external model without warning that the wrapper has no direct MeshInstance3D
+- added:
+	- `docs/M24_4_OVERVIEW.md`
+	- `docs/M24_4_VALIDATION.txt`
+	- `M24_4_CHANGES.txt`

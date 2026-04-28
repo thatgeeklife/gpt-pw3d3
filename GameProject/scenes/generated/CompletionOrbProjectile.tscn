@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/generated/CompletionOrbProjectile.gd" id="1"]
+
+[node name="CompletionOrbProjectile" type="Node3D"]
+script = ExtResource("1")
+
+[node name="ShellMesh" type="MeshInstance3D" parent="."]
+
+[node name="CoreMesh" type="MeshInstance3D" parent="."]

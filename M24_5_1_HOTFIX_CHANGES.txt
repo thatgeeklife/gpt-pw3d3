@@ -1,0 +1,18 @@
+M24.5.1 Hotfix
+
+Base: M24.5
+
+Fixes:
+- The authoring tool now verifies that a generated wrapper .tscn actually exists before assigning it to a theme scene path field.
+- Validation now attempts to auto-repair missing generated *_wrapper.tscn files when a sibling .glb or .gltf model already exists beside the missing wrapper path.
+- FileDialog res:// selections are normalized more defensively before import/wrapper generation.
+
+Why:
+- M24.5 could store a wrapper path such as res://assets/theme_imports/walls/wall_wrapper.tscn even if the wrapper file was not visible/created at that path, causing validation errors like:
+  straight_wall_scene_a_path does not exist: res://assets/theme_imports/walls/wall_wrapper.tscn
+
+Still unchanged:
+- Runtime Steam lobby/networking flow.
+- Holding room/portal flow.
+- Theme data still stores .tscn scene paths only.
+- External .tscn import is still intentionally unsupported.

@@ -1,0 +1,14 @@
+M19.3
+- added `GameProject/systems/level_runtime/BakedLevelDefinitionAdapter.gd`
+- updated `GameProject/systems/level_runtime/LevelContentLibrary.gd`
+  - prefers baked JSON definitions from sibling `SharedLevelContent/baked_levels/`
+  - falls back to the old image importer if baked content is missing
+- updated baker output flow to save companion `.json` beside baked `.tres`
+- added baked JSON level files for:
+  - Forest
+  - Lava
+  - Portrait
+  - Scene
+  - sample_forest
+  - sample_lava
+- added M19.3 overview and validation docs

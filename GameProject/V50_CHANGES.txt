@@ -1,0 +1,7 @@
+v50
+- Added scrollable Steam lobby list with Join buttons to the right of the menu buttons.
+- Added Refresh Lobby List button.
+- Hardcoded SteamMultiplayerPeer host creation to create_host(0, []) first, then fall back to create_host() / create_host(0) if needed.
+- Hardcoded SteamMultiplayerPeer client creation to create_client(host_steam_id, 0) first, then fall back to create_client(host_steam_id).
+- Leaves the lobby and clears session state if Steam peer creation fails.
+- Included steam_appid.txt with 480.

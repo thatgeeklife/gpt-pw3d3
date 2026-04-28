@@ -1,0 +1,20 @@
+M21.2 validation
+
+1. Open `GameProject/project.godot`
+2. Enter a level
+3. Confirm:
+	- the room floor is visually divided into:
+		- play zone
+		- edge ring
+		- outer floor
+	- floor visuals still line up with the larger world-scale cells
+	- player collision still works normally
+	- gameplay tiles still sit correctly over the play area
+	- there are no missing floor gaps around the room edges
+
+4. Compare Forest / Lava / Portrait / Scene
+5. Confirm theme colors still differ between rooms
+
+Expected M21.2 limitation:
+- the floor still uses generated box-piece visuals rather than imported authored floor kit scenes
+- weighted wall variants are not part of this milestone yet

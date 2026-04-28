@@ -1,0 +1,30 @@
+M19.3 validation
+
+1. Open `GameProject/project.godot`
+2. Start the game and select:
+   - Forest
+   - Lava
+   - Portrait
+   - Scene
+3. Confirm each level still loads and plays
+
+4. Confirm the baked files exist:
+   - `SharedLevelContent/baked_levels/forest_level.json`
+   - `SharedLevelContent/baked_levels/lava_level.json`
+   - `SharedLevelContent/baked_levels/portrait_level.json`
+   - `SharedLevelContent/baked_levels/scene_level.json`
+
+5. Confirm normal path uses baked content:
+   - temporarily rename one baked JSON file
+   - verify the level still loads via fallback image-import path
+   - restore the baked JSON and verify it loads again
+
+6. In the baker project:
+   - bake sample_forest again
+   - confirm both files are written:
+     - `.tres`
+     - `.json`
+
+Expected M19.3 limitation:
+- the runtime still uses a compatibility adapter into the legacy `LevelDefinition` shape rather than consuming `BakedLevelDefinition` directly
+- cleanup of that adapter layer can happen in a later milestone

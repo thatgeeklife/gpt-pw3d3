@@ -1,0 +1,9 @@
+v58 milestone 4
+- Added LevelSessionState.gd
+- Session state now supports:
+	- host-seeded active level id and theme id
+	- shared completed_pixel_ids runtime state
+	- level-complete flag
+	- tile completion lookup and mutation
+	- applying current completed/incomplete state onto an already-generated level root
+- Patched PlayerProgressData.gd with get_completed_pixel_ids(level_id) so host progress can be copied cleanly into the active session state.

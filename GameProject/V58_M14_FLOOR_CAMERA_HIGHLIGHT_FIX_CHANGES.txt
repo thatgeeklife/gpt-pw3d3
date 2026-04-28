@@ -1,0 +1,6 @@
+v58 M14 floor/camera/highlight fix
+- Camera now sits behind the player instead of facing the front.
+- Holding-room floor top was lowered to y=0.
+- Player body was raised slightly so feet sit properly on the floor.
+- Tile geometry now sinks below y=0 so tile tops sit at floor level.
+- Tile highlight was made larger, brighter, and more pronounced.

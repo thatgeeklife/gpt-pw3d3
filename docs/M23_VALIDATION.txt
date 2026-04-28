@@ -1,0 +1,22 @@
+M23 validation
+
+1. Open `GameProject/project.godot`
+2. Pick a level whose `theme_id` points to a theme JSON with authored scene paths
+3. Confirm:
+	- floor zones use authored scenes when paths are valid and counts are reasonable
+	- straight walls use authored scenes when paths are valid
+	- corner posts use authored scenes when paths are valid
+	- collision still blocks the player at wall edges
+
+4. Test fallback behavior:
+	- temporarily blank one scene path in the theme JSON
+	- confirm that part falls back to the primitive renderer instead of breaking
+
+5. Test custom theme loading:
+	- set a level manifest/theme id to `normalized_prototype`
+	- confirm the theme JSON is picked up from:
+		- `res://data/levels/themes/normalized_prototype_theme.json`
+
+Expected limitation:
+- authored floor scenes still instantiate per-piece nodes rather than a custom authored-scene batching path
+- very large floor zones intentionally fall back to the primitive MultiMesh renderer

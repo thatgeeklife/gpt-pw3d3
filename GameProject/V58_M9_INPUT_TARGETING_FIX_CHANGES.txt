@@ -1,0 +1,4 @@
+v58 M9 input/targeting/facing fix
+- Moved the facing cone lower and farther forward so it reads direction without blocking the camera.
+- Changed mouse look to work while holding right click using _input, which avoids UI consumption issues.
+- Adjusted tile targeting to prefer roughly 1.5-2 tiles ahead instead of very near tiles.

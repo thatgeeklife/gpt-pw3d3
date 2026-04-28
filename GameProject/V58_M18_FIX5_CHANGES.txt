@@ -1,0 +1,4 @@
+v58 M18 fix 5
+- Switched MultiMesh tile/orb materials back to StandardMaterial3D with vertex-color-as-albedo for simpler, more reliable instance colors.
+- Replaced the old tile-node label functions in GameRoot with the runtime-driven NearbyTileCodeLabelPool path.
+- Syncing visual tiles from runtime data now marks chunk renderers dirty and refreshes visible chunks instead of trying to touch legacy tile nodes.

@@ -1,0 +1,14 @@
+v58 M10 validation
+
+Camera / facing validation:
+1. Enter a generated level.
+2. Confirm the player avatar faces away from the camera in the expected third-person direction.
+3. Confirm the front cone points the same way the player is facing.
+4. Hold right click and move the mouse.
+5. Confirm the camera rotates around the player while keeping the avatar-facing relationship sensible.
+
+Targeting validation:
+1. Walk near a cluster of incomplete tiles.
+2. Face diagonally across them.
+3. Confirm the highlight prefers a tile about 1.5-2 tiles ahead rather than a very near diagonal tile.
+4. Press F and confirm the expected highlighted tile is the one completed.

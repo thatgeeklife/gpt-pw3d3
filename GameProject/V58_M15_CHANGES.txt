@@ -1,0 +1,11 @@
+v58 milestone 15
+- Added shared render resource cache in LevelRenderResources.gd.
+- Generated tiles now reuse shared tile, highlight, and orb meshes instead of allocating primitive meshes per tile.
+- Reduced per-frame render allocation pressure inside GeneratedTile.gd.
+- Tile code labels now use nearby-only visibility:
+	- incomplete tiles only
+	- within about 15 tiles of the local player
+	- targeted tile stays visible
+- Added dense-level runtime safety cap in GameRoot / LevelContentLibrary.
+- Replaced the 512 test scene with a much sparser transparent-edge test image.
+- Current runtime safety cap is 12000 visible tiles.

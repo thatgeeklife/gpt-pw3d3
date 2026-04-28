@@ -1,0 +1,6 @@
+M24.5.3 validation report refresh hotfix
+
+- Validation Report now gets a visible refresh number, status, reason, and current theme file path.
+- Validate Theme now logs the latest PASS/FAIL summary with error/warning/info counts.
+- Validation report text is cleared, rewritten, scrolled to the top, and redrawn on every validation pass.
+- No Steam lobby, runtime networking, portal, or level transition code was changed.

@@ -1,0 +1,136 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/BakerMain.gd" id="1"]
+
+[node name="BakerMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Level Baker Project - M19.3"
+
+[node name="SubtitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Bake source images into .tres + .json baked level files."
+
+[node name="FormGrid" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 10
+
+[node name="SourceImagePathLabel" type="Label" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+text = "Source image path"
+
+[node name="SourceImagePathEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LevelIdLabel" type="Label" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+text = "Level id"
+
+[node name="LevelIdEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LevelNameLabel" type="Label" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+text = "Level name"
+
+[node name="LevelNameEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ThemeIdLabel" type="Label" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+text = "Theme id"
+
+[node name="ThemeIdEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OutputPathLabel" type="Label" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+text = "Output baked path"
+
+[node name="OutputPathEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/FormGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BrowseRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BrowseSourceButton" type="Button" parent="MarginContainer/VBoxContainer/BrowseRow"]
+layout_mode = 2
+text = "Browse Source"
+
+[node name="BrowseOutputButton" type="Button" parent="MarginContainer/VBoxContainer/BrowseRow"]
+layout_mode = 2
+text = "Browse Output"
+
+[node name="ButtonRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ValidateButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+text = "Validate"
+
+[node name="CreateSampleButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+text = "Create Sample"
+
+[node name="BakeLevelButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+text = "Bake Level"
+
+[node name="StatusLog" type="TextEdit" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+editable = false
+
+[node name="SourceImageFileDialog" type="FileDialog" parent="."]
+title = "Select Source Image"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png ; PNG Images", "*.jpg,*.jpeg ; JPEG Images", "*.webp ; WEBP Images", "*.bmp ; BMP Images")
+
+[node name="OutputPathFileDialog" type="FileDialog" parent="."]
+title = "Select Output Baked Path"
+file_mode = 4
+access = 2
+filters = PackedStringArray("*.tres ; Baked Level Files")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BrowseRow/BrowseSourceButton" to="." method="_on_browse_source_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BrowseRow/BrowseOutputButton" to="." method="_on_browse_output_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonRow/ValidateButton" to="." method="_on_validate_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonRow/CreateSampleButton" to="." method="_on_create_sample_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonRow/BakeLevelButton" to="." method="_on_bake_level_pressed"]
+[connection signal="file_selected" from="SourceImageFileDialog" to="." method="_on_source_file_selected"]
+[connection signal="file_selected" from="OutputPathFileDialog" to="." method="_on_output_file_selected"]

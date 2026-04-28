@@ -1,0 +1,5 @@
+v58 M9 highlight/camera polish
+- Changed the highlight from a broad plate to a crosshair-like shape made from two bars.
+- Reduced interaction range to 2.0 tiles and tightened front-facing alignment.
+- Added a front-facing cone mesh on the player so facing direction is easier to read.
+- Added mouse-driven camera yaw/pitch and mouse-wheel zoom.

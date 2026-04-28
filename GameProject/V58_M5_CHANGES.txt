@@ -1,0 +1,9 @@
+v58 milestone 5
+- Updated GeneratedTile.gd to improve completed-tile presentation.
+- Completed tiles now show:
+	- a glowing glass orb centered above the tile
+	- orb color from the original source image color
+	- subtle float motion
+	- subtle emissive pulse
+- Incomplete tiles continue using muted source colors.
+- Completed tile base now darkens slightly to make the orb stand out more clearly.

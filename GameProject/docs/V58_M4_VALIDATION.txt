@@ -1,0 +1,34 @@
+v58 M4 validation
+
+Suggested validation steps:
+1. Create a PlayerProgressData:
+	var progress = load("res://systems/level_progress/PlayerProgressData.gd").new()
+	progress.mark_tile_completed("level_test_001", 3)
+	progress.mark_tile_completed("level_test_001", 7)
+
+2. Import/build a level definition and theme as in M3.
+
+3. Seed session state:
+	var session_state = load("res://systems/level_runtime/LevelSessionState.gd").new()
+	session_state.seed_from_host_progress(definition, "theme_test", progress)
+
+4. Check:
+	- session_state.active_level_id == definition.level_id
+	- session_state.active_theme_id == "theme_test"
+	- session_state.is_tile_completed(3) == true
+	- session_state.is_tile_completed(7) == true
+	- session_state.is_tile_completed(9) == false
+
+5. Generate a room using:
+	var generator = load("res://systems/level_runtime/LevelGenerator.gd").new()
+	var generated_root = generator.generate_level(
+		definition,
+		theme,
+		session_state.get_completed_pixel_ids_copy()
+	)
+	add_child(generated_root)
+
+6. Optional:
+	- call session_state.complete_tile(pixel_id) on a previously incomplete tile
+	- then call session_state.apply_to_generated_level_root(generated_root)
+	- verify the tile visually switches to completed

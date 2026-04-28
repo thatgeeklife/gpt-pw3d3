@@ -1,0 +1,14 @@
+v58 milestone 6
+- Added live generated-level integration into the existing level flow.
+- Added LevelContentLibrary.gd to map level keys to generated-image assets and themes.
+- Updated GameRoot.gd so selecting Forest/Lava now builds a generated level from an image instead of only a simple colored box room.
+- Updated LevelGenerator.gd to include default lighting and room-size metadata.
+- Added random source-image assets for future/generated levels:
+	- random_16x16.png
+	- random_32x32.png
+	- random_64x64.png
+	- random_512x512.png
+
+Current live mapping:
+- Forest -> random_16x16.png with a forest-style theme
+- Lava -> random_32x32.png with a lava-style theme

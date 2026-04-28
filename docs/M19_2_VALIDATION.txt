@@ -1,0 +1,32 @@
+M19.2 validation
+
+1. Open `LevelBakerProject/project.godot`
+   - confirm the baker project opens
+   - confirm the BakerMain scene appears
+
+2. In the baker UI:
+   - leave the default sample_forest values
+   - click Validate
+   - confirm metadata and image validation pass
+   - click Bake Level
+   - confirm the log reports:
+     - baked definition saved
+     - visible pixel count
+     - palette count
+     - bake result PASS
+
+3. Confirm output exists:
+   - `SharedLevelContent/baked_levels/sample_forest_level.tres`
+
+4. Change the source image to:
+   - `../SharedLevelContent/source_images/sample_lava.png`
+   - change ids/names/output path accordingly
+   - validate and bake again
+
+5. Inspect the shared format:
+   - `SharedLevelContent/scripts/BakedLevelDefinition.gd`
+   - `GameProject/scripts/shared/BakedLevelDefinition.gd`
+   - `LevelBakerProject/scripts/shared/BakedLevelDefinition.gd`
+
+Expected M19.2 limitation:
+- the game project does not yet use baked definitions as the normal load path; that is M19.3

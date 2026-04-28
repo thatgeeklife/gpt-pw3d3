@@ -1,0 +1,35 @@
+v58 M15 validation
+
+Camera / movement:
+1. Host a session.
+2. Verify camera stays behind the player.
+3. Verify W/S move forward/back and A/D move left/right.
+4. Verify right-click drag still rotates as expected.
+
+Ring / highlight:
+1. Verify the player ring is visible and colored by player slot.
+2. Enter a level and target a tile.
+3. Verify highlight color matches the player color.
+
+Tile / floor visibility:
+1. Enter Forest, Lava, and Portrait.
+2. Verify incomplete tiles are clearly visible.
+3. Verify completed tiles switch to source color.
+4. Verify tiles and player are not visually sinking into the floor.
+
+Nearby labels:
+1. Enter a level with many incomplete tiles.
+2. Stand still and inspect visible labels.
+3. Move away and verify distant labels disappear.
+4. Verify the targeted tile label remains visible.
+
+Scene level safety:
+1. Select Scene.
+2. Verify the sparse scene loads without RID/resource spam.
+3. If a future dense image exceeds the safety cap, verify the status message clearly reports the runtime safety limit.
+
+Regression:
+1. Verify minimap still works.
+2. Verify pedestals still select levels.
+3. Verify save/load still restores completion state.
+4. Verify host/client completion sync still works.

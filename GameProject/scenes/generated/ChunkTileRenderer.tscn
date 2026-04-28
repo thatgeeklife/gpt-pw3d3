@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/generated/ChunkTileRenderer.gd" id="1"]
+
+[node name="ChunkTileRenderer" type="Node3D"]
+script = ExtResource("1")
+
+[node name="IncompleteTiles" type="MultiMeshInstance3D" parent="."]
+
+[node name="CompletedTiles" type="MultiMeshInstance3D" parent="."]
+
+[node name="CompletedOrbShells" type="MultiMeshInstance3D" parent="."]
+
+[node name="CompletedOrbCores" type="MultiMeshInstance3D" parent="."]

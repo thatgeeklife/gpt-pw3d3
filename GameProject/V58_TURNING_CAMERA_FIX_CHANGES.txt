@@ -1,0 +1,4 @@
+v58 turning/camera fix
+- Swapped A and D turning directions from the previous build.
+- Keyboard turning now rotates only the player body.
+- The camera orbit no longer turns with A/D; it stays at the selected orbit angle unless the user right-click rotates it.

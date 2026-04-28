@@ -1,0 +1,4 @@
+v53
+- Fixed host Steam lobby flow: when Steam reports the host also joined the lobby it created, that event no longer takes the client-join path or resets the host session.
+- Preserved the working host session established in _on_lobby_created().
+- Fixed Steam lobby browser placeholder/list layout so the right panel no longer wraps 'No lobbies found.' vertically.

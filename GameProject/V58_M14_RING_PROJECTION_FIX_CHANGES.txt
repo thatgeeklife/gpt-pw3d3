@@ -1,0 +1,5 @@
+v58 M14 ring projection / tile visibility fix
+- Camera follow was corrected back to the player's back.
+- Replaced the floor ring mesh with a projected Decal ring attempt.
+- Tiles were raised so their top surface now sits 0.1 above the floor.
+- Tile highlight was made even stronger and easier to read.

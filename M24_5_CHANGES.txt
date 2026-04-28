@@ -1,0 +1,14 @@
+M24.5 changes
+
+Base: M24.4, which was built from the uploaded M24.2 stable baseline.
+
+- external .gltf/.glb scene picker selections are now copied into GameProject/assets/theme_imports/ before wrapper generation
+- floor slots import into GameProject/assets/theme_imports/floors/
+- wall and corner-post slots import into GameProject/assets/theme_imports/walls/
+- model filename collisions are handled by reusing identical files or creating numbered copies
+- .gltf dependency URIs are copied best-effort beside the imported .gltf
+- generated wrapper .tscn files include M24.5 source/import metadata
+- theme JSON assignment still stores only the generated wrapper .tscn path
+- external .tscn files are still rejected because dependency-copying for arbitrary Godot scenes is not safe yet
+
+Runtime/lobby/networking files were intentionally left unchanged from M24.4.

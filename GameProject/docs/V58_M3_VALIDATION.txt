@@ -1,0 +1,36 @@
+v58 M3 validation
+
+Suggested validation steps:
+1. Import a source image into a LevelDefinition:
+	var definition = LevelImageImporter.import_image_to_definition(
+		"res://path/to/image.png",
+		"level_test_001",
+		"Test Level",
+		"theme_test"
+	)
+
+2. Create a theme:
+	var theme = load("res://data/levels/LevelTheme.gd").new()
+	theme.configure(
+		"theme_test",
+		"Test Theme",
+		Color(0.18, 0.18, 0.18, 1.0),
+		Color(0.10, 0.10, 0.10, 1.0),
+		Color(0.25, 0.25, 0.25, 1.0)
+	)
+
+3. Generate the room:
+	var generator = load("res://systems/level_runtime/LevelGenerator.gd").new()
+	var generated_root = generator.generate_level(definition, theme, {})
+	add_child(generated_root)
+
+4. Check that:
+	- the room floor is a full rectangle
+	- the occupied image shape has 5 tiles of border around it
+	- perimeter walls are present
+	- tiles are placed only for non-transparent pixels
+	- tile colors are muted variants of the image colors
+
+5. Optional:
+	- pass a completed_pixel_ids dictionary like { 3: true, 7: true }
+	- verify those tiles switch into completed state

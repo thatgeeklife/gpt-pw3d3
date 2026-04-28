@@ -1,0 +1,22 @@
+M19.1 validation
+
+1. Open `GameProject/project.godot`
+   - confirm the existing game project still opens
+
+2. Open `LevelBakerProject/project.godot`
+   - confirm the separate baker project opens
+   - confirm the BakerMain scene appears
+
+3. In the baker UI:
+   - confirm all form fields are visible
+   - click Validate
+   - confirm the log reports pass/fail state for the required fields
+   - click Create Sample
+   - confirm the log reports a valid in-memory baked definition
+
+4. Inspect:
+   - `SharedLevelContent/scripts/BakedLevelDefinition.gd`
+   - confirm the shared baked format exists
+
+Expected M19.1 limitation:
+- the baker does not yet load source images or save baked level files; that arrives in M19.2

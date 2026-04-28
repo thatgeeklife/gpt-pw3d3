@@ -1,0 +1,13 @@
+M24.2
+- added `LevelBakerProject/scripts/theme_tool/ThemeValidationService.gd`
+- updated `LevelBakerProject/scenes/ThemeAuthoringMain.tscn` with:
+	- Validate Theme button
+	- Validation Report panel
+- updated `LevelBakerProject/scripts/theme_tool/ThemeAuthoringMain.gd` to:
+	- run validation
+	- display structured validation output
+	- re-run validation after load/save/scene assignment changes
+- added:
+	- `docs/M24_2_OVERVIEW.md`
+	- `docs/M24_2_VALIDATION.txt`
+	- `M24_2_CHANGES.txt`

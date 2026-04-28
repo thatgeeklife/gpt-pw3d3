@@ -1,0 +1,21 @@
+v58 M2 validation
+
+Suggested validation steps:
+1. Put a small PNG with transparency somewhere under res://
+2. Call:
+	LevelImageImporter.import_image_to_definition(
+		"res://path/to/image.png",
+		"level_test_001",
+		"Test Level",
+		"theme_test"
+	)
+3. Check that:
+	- source_width and source_height match the image
+	- every non-transparent pixel became a tile entry
+	- each tile has:
+		- stable pixel_id
+		- correct grid_pos
+		- correct source_color
+4. Run validate_definition(definition)
+5. Optionally save JSON with save_definition_as_json(...)
+6. Reload with load_definition_from_json(...) and compare counts / ids

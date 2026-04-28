@@ -1,0 +1,5 @@
+v58 milestone 12
+- Updated controls so A and D rotate the player instead of Q and E.
+- Removed sideways/strafe walking behavior from player movement logic.
+- Forward/back movement remains on W/S.
+- This build packages the current state as M12 with the control scheme adjustment requested.

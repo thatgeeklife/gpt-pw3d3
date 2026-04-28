@@ -1,0 +1,33 @@
+v58 M13 validation
+
+Color codes:
+1. Enter a generated level.
+2. Verify incomplete tiles show alphanumeric color codes above them.
+3. Verify completed tiles hide the code and show the orb.
+
+Color selection:
+1. Press Q and E.
+2. Verify the top-left HUD cycles through available colors.
+3. Verify the swatch, code, and index update correctly.
+
+Color-match completion:
+1. Highlight a tile.
+2. Throw the wrong selected color with F.
+3. Verify the projectile still uses the selected color from the moment it was thrown.
+4. Verify the tile does not complete.
+5. Select the correct color and throw again.
+6. Verify the tile completes and shows its permanent orb.
+
+Progress HUD:
+1. Complete several tiles.
+2. Verify the top-right HUD updates:
+	- level name
+	- whole percent complete
+	- completed / total
+3. Verify percent is floored and does not show 100% before the level is fully finished.
+
+Minimap:
+1. Verify the minimap appears in the lower left while in a generated level.
+2. Verify incomplete tiles are shown in near-black.
+3. Verify completed tiles show their true color.
+4. Verify the player marker and facing arrow move/rotate correctly.

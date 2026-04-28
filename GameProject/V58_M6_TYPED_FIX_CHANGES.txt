@@ -1,0 +1,4 @@
+v58 M6 typed fix
+- Replaced inferred-type ':=' local variable declarations with explicit or plain '=' assignments across GDScript files.
+- Explicitly typed front_z and several float temporaries that could trigger warning-as-error inference failures.
+- Intended to reduce/avoid 'Cannot infer the type' compiler errors in stricter Godot settings.

@@ -1,0 +1,30 @@
+v58 M6 validation
+
+Primary validation:
+1. Open the project and run it.
+2. Host a session as usual.
+3. Select Forest.
+4. Enter the portal.
+5. Verify:
+	- the active level is no longer a plain colored room
+	- the level is generated from image data
+	- generated tiles appear only where source pixels exist
+	- there is a full rectangle floor with border and walls
+	- a return portal exists inside the generated level
+6. Return to the holding room.
+7. Select Lava.
+8. Enter again and verify the Lava level uses a different generated layout/theme.
+
+Asset validation:
+1. Confirm these files exist under res://assets/levels/
+	- random_16x16.png
+	- random_32x32.png
+	- random_64x64.png
+	- random_512x512.png
+2. Open the images and verify each pixel is a random opaque color.
+3. Confirm image dimensions match the filename.
+
+Notes:
+- Forest currently uses the 16x16 asset.
+- Lava currently uses the 32x32 asset.
+- The 64x64 and 512x512 assets are included for future/generated-level expansion and testing.

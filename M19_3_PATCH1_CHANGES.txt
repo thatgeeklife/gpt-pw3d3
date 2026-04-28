@@ -1,0 +1,6 @@
+M19.3 patch 1
+- added source/output FileDialog support to LevelBakerProject BakerMain UI
+- baker now writes JSON payload text into both .tres and .json outputs
+- GameProject LevelContentLibrary now prefers sibling baked .tres files
+- baked level loads are no longer cached in memory
+- updated baked files for Forest, Lava, Portrait, Scene, sample_forest, and sample_lava

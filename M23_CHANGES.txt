@@ -1,0 +1,11 @@
+M23
+- updated `GameProject/systems/level_runtime/LevelGenerator.gd` to instantiate authored floor/wall scenes from `LevelTheme`
+- added primitive fallback behavior when authored scene paths are missing
+- added authored floor-zone safety threshold fallback to MultiMesh rendering for very large counts
+- updated `GameProject/systems/level_runtime/LevelContentLibrary.gd` to load custom theme JSON files by `theme_id`
+- updated `GameProject/data/levels/LevelTheme.gd` with helper accessors for authored floor scenes
+- updated `GameProject/systems/level_runtime/ThemePieceVariant.gd` with optional scene paths
+- added:
+	- `docs/M23_OVERVIEW.md`
+	- `docs/M23_VALIDATION.txt`
+	- `M23_CHANGES.txt`

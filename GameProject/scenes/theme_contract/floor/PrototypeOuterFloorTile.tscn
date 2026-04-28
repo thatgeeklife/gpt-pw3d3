@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[node name="PrototypeOuterFloorTile" type="Node3D"]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.0125, 0)
+mesh = SubResource("BoxMesh_outer")
+
+[sub_resource type="BoxMesh" id="BoxMesh_outer"]
+size = Vector3(1.84, 0.025, 1.84)

@@ -1,0 +1,3 @@
+v58 M18 fix
+- Renamed LevelGenerator.generate_level() completed_pixel_ids parameter to _completed_pixel_ids to remove the unused parameter warning.
+- Fixed ChunkTileRenderer so node references are resolved before rebuild_from_runtime_data() runs, avoiding null MultiMeshInstance3D access before _ready().

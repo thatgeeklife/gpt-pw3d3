@@ -1,0 +1,7 @@
+M20
+- added manifest-driven runtime catalog services
+- integrated progression-aware unlock state into level selection
+- updated level pedestals with preview + lock/select/complete states
+- added holding-room level info panel
+- updated portal feedback text to reflect selected level name
+- updated bake manifest service to preserve preview/progression metadata

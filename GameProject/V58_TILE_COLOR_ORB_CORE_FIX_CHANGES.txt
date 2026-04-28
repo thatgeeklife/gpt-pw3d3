@@ -1,0 +1,4 @@
+v58 tile color + orb core update
+- Rebalanced tile colors so they stay pastel/chalky without looking overly washed out.
+- Added a visible inner orb core with a more opaque solid color.
+- The outer shell remains translucent so the core reads through it.

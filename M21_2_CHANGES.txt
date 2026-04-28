@@ -1,0 +1,10 @@
+M21.2
+- added `GameProject/systems/level_runtime/RoomFloorLayoutBuilder.gd`
+- upgraded room floor rendering to use three zones:
+	- play floor
+	- edge floor
+	- outer floor
+- floor zones now render through MultiMesh instances for efficiency
+- kept one stable collision base under the room
+- expanded `LevelTheme.gd` with `edge_floor_color`
+- updated `LevelGenerator.gd` to use zoned modular floor rendering

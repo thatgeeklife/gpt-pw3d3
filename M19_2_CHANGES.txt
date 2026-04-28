@@ -1,0 +1,9 @@
+M19.2
+- added `LevelBakerProject/scripts/BakeValidation.gd`
+- added `LevelBakerProject/scripts/BakedLevelBuilder.gd`
+- upgraded baker UI with Validate + Bake Level pipeline
+- mirrored `BakedLevelDefinition.gd` into GameProject and LevelBakerProject local shared paths
+- added sample source images:
+  - `SharedLevelContent/source_images/sample_forest.png`
+  - `SharedLevelContent/source_images/sample_lava.png`
+- added M19.2 overview and validation docs

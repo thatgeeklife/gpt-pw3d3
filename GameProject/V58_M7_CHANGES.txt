@@ -1,0 +1,7 @@
+v58 milestone 7
+- Added LevelSaveSystem.gd
+- Added LevelUnlockService.gd skeleton
+- GameRoot.gd now loads local player progress on startup using a profile id based on Steam ID when available
+- Generated level spawning now seeds active session tile state from local loaded progress before generation
+- Leaving the session now saves local progress back to user:// JSON
+- This milestone focuses on save/load plumbing and host-seeded session wiring, not final unlock flow or multiplayer session-state replication

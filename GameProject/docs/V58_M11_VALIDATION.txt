@@ -1,0 +1,27 @@
+v58 M11 validation
+
+Autosave validation:
+1. Host a session and enter a generated level.
+2. Complete several tiles.
+3. Wait at least 15 seconds without leaving the session.
+4. Close the session or close the game.
+5. Reopen and verify the completed tiles were preserved.
+
+Leave-session validation:
+1. Host a session and complete a few tiles.
+2. Leave the session immediately.
+3. Start again and verify those tiles are still completed.
+
+Quit validation:
+1. Host a session and complete a few tiles.
+2. Close the game window directly.
+3. Reopen and verify progress persisted.
+
+Level-complete validation:
+1. Complete all tiles in a generated level.
+2. Verify the level is marked complete in saved progress.
+3. Verify save occurs immediately once the level completes.
+
+Safety validation:
+1. Start a session, complete tiles, and do not leave the level before quitting.
+2. Verify the active session state still merges correctly into local progress on the next run.

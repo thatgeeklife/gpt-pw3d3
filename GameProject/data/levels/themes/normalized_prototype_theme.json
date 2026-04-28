@@ -1,0 +1,51 @@
+{
+  "theme_id": "normalized_prototype",
+  "theme_name": "Normalized Prototype Theme",
+  "floor_color": {
+    "r": 0.3,
+    "g": 0.24,
+    "b": 0.17,
+    "a": 1.0
+  },
+  "edge_floor_color": {
+    "r": 0.25,
+    "g": 0.2,
+    "b": 0.14,
+    "a": 1.0
+  },
+  "border_floor_color": {
+    "r": 0.2,
+    "g": 0.18,
+    "b": 0.14,
+    "a": 1.0
+  },
+  "wall_color": {
+    "r": 0.34,
+    "g": 0.28,
+    "b": 0.19,
+    "a": 1.0
+  },
+  "tile_height": 0.25,
+  "wall_height": 5.0,
+  "wall_thickness": 0.5,
+  "tile_muting_strength": 0.82,
+  "cell_world_size": 2.0,
+  "wall_variant_weight_common": 60,
+  "wall_variant_weight_inset": 28,
+  "wall_variant_weight_buttress": 12,
+  "wall_small_room_disable_buttress_under_perimeter": 28,
+  "wall_corner_post_scale": 1.18,
+  "authored_scene_pack_id": "normalized_prototype_pack",
+  "play_floor_scene_path": "res://scenes/theme_contract/floor/PrototypePlayFloorTile.tscn",
+  "edge_floor_scene_path": "res://scenes/theme_contract/floor/PrototypeEdgeFloorTile.tscn",
+  "outer_floor_scene_path": "res://scenes/theme_contract/floor/PrototypeOuterFloorTile.tscn",
+  "straight_wall_scene_a_path": "res://scenes/theme_contract/walls/PrototypeStraightWall_A.tscn",
+  "straight_wall_scene_b_path": "res://scenes/theme_contract/walls/PrototypeStraightWall_B.tscn",
+  "straight_wall_scene_c_path": "res://scenes/theme_contract/walls/PrototypeStraightWall_C.tscn",
+  "corner_post_scene_a_path": "res://scenes/theme_contract/walls/PrototypeCornerPost_A.tscn",
+  "corner_post_scene_b_path": "res://scenes/theme_contract/walls/PrototypeCornerPost_B.tscn",
+  "expected_floor_piece_world_size": 2.0,
+  "expected_wall_segment_world_length": 2.0,
+  "expected_wall_forward_axis": "+Z",
+  "expected_origin_note": "Root centered on footprint, y=0 at floor contact."
+}

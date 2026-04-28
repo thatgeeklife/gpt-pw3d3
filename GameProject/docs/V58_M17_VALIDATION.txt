@@ -1,0 +1,33 @@
+v58 M17 validation
+
+Chunk metadata:
+1. Load Forest, Lava, Portrait, and Scene.
+2. Verify the level loads without chunk lookup errors.
+3. Confirm chunk roots appear under GeneratedLevelRoot/TileRoot.
+
+Chunk visibility:
+1. Enter a level.
+2. Move around the map.
+3. Verify only nearby chunk roots stay visible.
+4. Verify there is no obvious gameplay regression while chunks hide/show.
+
+Targeting:
+1. Target incomplete tiles while moving across chunk boundaries.
+2. Verify targeting still prefers nearby incomplete tiles.
+3. Verify completed tiles are skipped.
+
+Chunk-local updates:
+1. Complete a tile.
+2. Verify only the owning chunk refreshes.
+3. Verify completed visuals update correctly.
+
+Labels:
+1. Move around the level.
+2. Verify nearby incomplete labels update only in active chunks.
+3. Verify distant chunk labels are not shown.
+
+Multiplayer regression:
+1. Host and join a second player.
+2. Enter the same level.
+3. Complete tiles.
+4. Verify clients still receive completion updates correctly.

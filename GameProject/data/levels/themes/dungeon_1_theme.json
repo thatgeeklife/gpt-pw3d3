@@ -1,0 +1,51 @@
+{
+	"authored_scene_pack_id": "dungeon_1",
+	"border_floor_color": {
+		"a": 1.0,
+		"b": 0.12,
+		"g": 0.12,
+		"r": 0.12
+	},
+	"cell_world_size": 2.0,
+	"corner_post_scene_a_path": "res://assets/theme_imports/walls/wall_corner_wrapper.tscn",
+	"corner_post_scene_b_path": "res://assets/theme_imports/walls/wall_corner_wrapper.tscn",
+	"edge_floor_color": {
+		"a": 1.0,
+		"b": 0.14,
+		"g": 0.14,
+		"r": 0.14
+	},
+	"edge_floor_scene_path": "res://assets/theme_imports/floors/floor_dirt_small_A_wrapper.tscn",
+	"expected_floor_piece_world_size": 2.0,
+	"expected_origin_note": "Root centered on footprint, y=0 at floor contact.",
+	"expected_wall_forward_axis": "+Z",
+	"expected_wall_segment_world_length": 2.0,
+	"floor_color": {
+		"a": 1.0,
+		"b": 0.16,
+		"g": 0.16,
+		"r": 0.16
+	},
+	"outer_floor_scene_path": "res://assets/theme_imports/floors/floor_dirt_small_A_wrapper.tscn",
+	"play_floor_scene_path": "res://assets/theme_imports/floors/floor_dirt_small_A_wrapper.tscn",
+	"straight_wall_scene_a_path": "res://assets/theme_imports/walls/wall_wrapper.tscn",
+	"straight_wall_scene_b_path": "",
+	"straight_wall_scene_c_path": "",
+	"theme_id": "dungeon_1",
+	"theme_name": "Dungeon 1",
+	"tile_height": 0.25,
+	"tile_muting_strength": 0.82,
+	"wall_color": {
+		"a": 1.0,
+		"b": 0.22,
+		"g": 0.22,
+		"r": 0.22
+	},
+	"wall_corner_post_scale": 1.18,
+	"wall_height": 5.0,
+	"wall_small_room_disable_buttress_under_perimeter": 28.0,
+	"wall_thickness": 0.5,
+	"wall_variant_weight_buttress": 12.0,
+	"wall_variant_weight_common": 60.0,
+	"wall_variant_weight_inset": 28.0
+}
